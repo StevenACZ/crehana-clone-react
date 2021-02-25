@@ -2,24 +2,22 @@ import React from 'react';
 import { Redirect, Route, Switch } from 'react-router-dom';
 import { Header } from '../components/header/Header';
 
-import { HomeScreen } from '../pages/home/HomeScreen';
+import { CheckoutScreen } from '../pages/checkout/CheckoutScreen';
+import { CourseCatalogScreen } from '../pages/course-catalog/CourseCatalogScreen';
+import { CourseDetailScreen } from '../pages/course-detail/CourseDetailScreen';
 
 export const DashboardRouter = () => {
   return (
     <>
       <Header />
 
-      <div className="main-content">
-        <Switch>
-          <Route exact path="/home" component={ HomeScreen } />
-          {/* <Route exact path="/network" component={ NetworkScreen } /> */}
-          {/* <Route exact path="/jobs" component={ JobsScreen } /> */}
-          {/* <Route exact path="/messaging" component={ MessagingScreen } /> */}
-          {/* <Route exact path="/notifications" component={ NotificationsScreen } /> */}
+      <Switch>
+        <Route exact path="/course-catalog" component={ CourseCatalogScreen } />
+        <Route exact path="/course-detail" component={ CourseDetailScreen } />
+        <Route exact path="/checkout" component={ CheckoutScreen } />
 
-          <Redirect to="/home" />
-        </Switch>
-      </div> 
+        <Redirect to="/course-catalog" />
+      </Switch>
     </>
   )
 }
