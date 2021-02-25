@@ -6,6 +6,7 @@ import { AuthContext } from './auth/AuthContext';
 import { authReducer } from './auth/authReducer';
 
 // Global Styles
+import 'antd/dist/antd.css';
 import './assets/styles/App.css';
 
 // Basic Login
