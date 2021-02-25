@@ -59,10 +59,11 @@ export const CategoriesList = styled.ul`
   justify-content: flex-start;
   align-items: center;
   gap: 24px;
+  overflow-x: scroll;
 `;
 
 export const CategoriesItem = styled.li`
-  width: 120px;
+  min-width: 120px;
   height: 112px;
   background-color: #f6f7f9;
   border-radius: 10px;
@@ -76,5 +77,39 @@ export const CategoriesItem = styled.li`
     font-size: 14px;
     font-weight: 700;
     line-height: 20px;
+  }
+`;
+
+export const Courses = styled.section`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+  border: 1px solid blue;
+
+  h4 {
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 900;
+  }
+`;
+
+export const CoursesFilters = styled.div`
+  display: flex;
+  align-items: flex-end;
+  border: 1px solid red;
+  gap: 24px;
+`;
+
+export const CoursesFiltersItem = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  span {
+    font-size: 12px;
+    font-weight: 800;
+    line-height: 20px;
+    text-transform: uppercase;
   }
 `;
