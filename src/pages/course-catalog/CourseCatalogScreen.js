@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from '../../components/button/Button';
-import { CourseCatalog, Banner, Categories, CategoriesList, CategoriesItem } from './Styles';
+import { CourseCatalog, Banner, Categories, CategoriesList, CategoriesItem, Courses, CoursesFilters, CoursesFiltersItem } from './Styles';
 
 import announcementIcon from '../../assets/images/announcement-icon.png';
 
@@ -38,6 +38,23 @@ export const CourseCatalogScreen = () => {
           }
         </CategoriesList>
       </Categories>
+
+      <Courses>
+        <h4>Title H4 - Listado de cursos</h4>
+
+        <CoursesFilters>
+          <CoursesFiltersItem>
+            <span>Categoria</span>
+            <Button outline>Todos</Button>
+
+            {/* Crear componente Dropdown con button and div que sale debajo del button */}
+          </CoursesFiltersItem>
+
+          <Button>
+            Aplicar filtros
+          </Button>
+        </CoursesFilters>
+      </Courses>
     </CourseCatalog>
   )
 }
