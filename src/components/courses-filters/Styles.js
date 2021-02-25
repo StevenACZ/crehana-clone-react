@@ -3,7 +3,6 @@ import styled from 'styled-components';
 export const StyledCoursesFilters = styled.div`
   display: grid;
   align-items: flex-end;
-  border: 1px solid red;
   gap: 24px;
   grid-template-columns: repeat(5, 1fr);
 `;
