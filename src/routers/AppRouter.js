@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { BrowserRouter as Router, Switch } from 'react-router-dom';
+import { HashRouter, Switch } from 'react-router-dom';
 
 import { AuthContext } from '../auth/AuthContext';
 import { PrivateRoute } from './PrivateRoute';
@@ -13,7 +13,7 @@ export const AppRouter = () => {
   const { user } = useContext( AuthContext );
 
   return (
-    <Router>
+    <HashRouter>
       <Switch>
         <PublicRoute
           exact
@@ -28,6 +28,6 @@ export const AppRouter = () => {
           isAuthenticated={ user.logged }
         />
       </Switch>
-    </Router>
+    </HashRouter>
   )
 }
