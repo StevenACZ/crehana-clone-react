@@ -95,10 +95,11 @@ export const Courses = styled.section`
 `;
 
 export const CoursesFilters = styled.div`
-  display: flex;
+  display: grid;
   align-items: flex-end;
   border: 1px solid red;
   gap: 24px;
+  grid-template-columns: repeat(5, 1fr);
 `;
 
 export const CoursesFiltersItem = styled.div`
