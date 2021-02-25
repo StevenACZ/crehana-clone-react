@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
+
 import { CourseCatalog, Banner, Categories, CategoriesList, CategoriesItem, Courses } from './Styles';
 
 import announcementIcon from '../../assets/images/announcement-icon.png';
 
 import { CustomButton } from '../../components/button/CustomButton';
 import { CoursesFilters } from '../../components/courses-filters/CoursesFilters';
+import { CoursesList } from '../../components/courses-list/CoursesList';
 
 export const CourseCatalogScreen = () => {
 
@@ -59,6 +61,8 @@ export const CourseCatalogScreen = () => {
           filtersParams={ filtersParams }
           setFilterParams={ setFilterParams }
         />
+
+        <CoursesList />
       </Courses>
     </CourseCatalog>
   )
