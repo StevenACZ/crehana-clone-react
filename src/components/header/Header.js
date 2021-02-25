@@ -1,7 +1,7 @@
 import React from 'react';
 
 import LogoImg from '../../assets/images/logo.png';
-import { Button } from '../button/Button';
+import { CustomButton } from '../button/CustomButton';
 
 import { HeaderContainer, Logo, StyledHeader } from './Styles';
 
@@ -11,9 +11,9 @@ export const Header = () => {
       <HeaderContainer>
         <Logo src={ LogoImg } />
 
-        <Button outline>
+        <CustomButton outline={ 3 }>
           Registrate gratis
-        </Button>
+        </CustomButton>
       </HeaderContainer>
     </StyledHeader>
   )
