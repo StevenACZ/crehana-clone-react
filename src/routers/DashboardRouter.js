@@ -1,13 +1,13 @@
 import React from 'react';
 import { Redirect, Route, Switch } from 'react-router-dom';
-// import { Header } from '../components/Header';
+import { Header } from '../components/header/Header';
 
 import { HomeScreen } from '../pages/home/HomeScreen';
 
 export const DashboardRouter = () => {
   return (
     <>
-      {/* <Header /> */}
+      <Header />
 
       <div className="main-content">
         <Switch>
