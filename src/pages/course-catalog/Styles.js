@@ -26,6 +26,7 @@ export const Banner = styled.section`
     font-size: 40px;
     font-weight: 900;
     line-height: 44px;
+    margin: 0;
   }
 
   button {
@@ -47,6 +48,7 @@ export const Categories = styled.section`
     font-size: 24px;
     line-height: 28px;
     font-weight: 900;
+    margin: 0;
   }
 `;
 
@@ -69,6 +71,7 @@ export const CategoriesItem = styled.li`
   justify-content: center;
   align-items: center;
   gap: 8px;
+  cursor: pointer;
 
   span {
     font-size: 14px;
@@ -87,5 +90,6 @@ export const Courses = styled.section`
     font-size: 24px;
     line-height: 28px;
     font-weight: 900;
+    margin: 0;
   }
 `;
