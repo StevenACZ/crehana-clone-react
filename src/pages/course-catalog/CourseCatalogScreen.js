@@ -1,12 +1,35 @@
 import React from 'react';
-import { Button } from '../../components/button/Button';
+// import { Button } from '../../components/button/Button';
 import { CourseCatalog, Banner, Categories, CategoriesList, CategoriesItem, Courses, CoursesFilters, CoursesFiltersItem } from './Styles';
 
 import announcementIcon from '../../assets/images/announcement-icon.png';
 
+import { Menu, Dropdown } from 'antd';
+import {  DownOutlined, UserOutlined  } from '@ant-design/icons';
+
+import { CustomButton } from '../../components/button/CustomButton';
+
 export const CourseCatalogScreen = () => {
 
   const categoriesItem = [ 1, 2, 3, 4, 5, 6, 7, 8 ];
+
+  function handleMenuClick(e) {
+    console.log('click', e);
+  }
+
+  const menu = (
+    <Menu onClick={handleMenuClick}>
+      <Menu.Item key="item-1" icon={<UserOutlined />}>
+        1st menu item
+      </Menu.Item>
+      <Menu.Item key="item-2" icon={<UserOutlined />}>
+        2nd menu item
+      </Menu.Item>
+      <Menu.Item key="item-3" icon={<UserOutlined />}>
+        3rd menu item
+      </Menu.Item>
+    </Menu>
+  );
 
   return (
     <CourseCatalog>
@@ -16,9 +39,9 @@ export const CourseCatalogScreen = () => {
           banner cursos nuevos
         </h2>
 
-        <Button>
+        <CustomButton>
           Compra ahora
-        </Button>
+        </CustomButton>
       </Banner>
 
       <Categories>
@@ -45,14 +68,47 @@ export const CourseCatalogScreen = () => {
         <CoursesFilters>
           <CoursesFiltersItem>
             <span>Categoria</span>
-            <Button outline>Todos</Button>
 
-            {/* Crear componente Dropdown con button and div que sale debajo del button */}
+            <Dropdown overlay={menu}>
+              <CustomButton outline={ 1 } dropdown="true">
+                Todos <DownOutlined />
+              </CustomButton>
+            </Dropdown>
+          </CoursesFiltersItem>
+          
+          <CoursesFiltersItem>
+            <span>SubCategoria</span>
+
+            <Dropdown overlay={menu}>
+              <CustomButton outline={ 1 } dropdown="true">
+                Todos <DownOutlined />
+              </CustomButton>
+            </Dropdown>
+          </CoursesFiltersItem>
+          
+          <CoursesFiltersItem>
+            <span>Nivel</span>
+
+            <Dropdown overlay={menu}>
+              <CustomButton outline={ 1 } dropdown="true">
+                Todos <DownOutlined />
+              </CustomButton>
+            </Dropdown>
           </CoursesFiltersItem>
 
-          <Button>
+          <CoursesFiltersItem>
+            <span>Precio</span>
+
+            <Dropdown overlay={menu}>
+              <CustomButton outline={ 1 } dropdown="true">
+                Todos <DownOutlined />
+              </CustomButton>
+            </Dropdown>
+          </CoursesFiltersItem>
+
+          <CustomButton>
             Aplicar filtros
-          </Button>
+          </CustomButton>
         </CoursesFilters>
       </Courses>
     </CourseCatalog>
