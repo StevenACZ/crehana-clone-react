@@ -6,7 +6,6 @@ export const StyledHeader = styled.header`
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid red;
 `;
 
 export const HeaderContainer = styled.header`
@@ -15,7 +14,6 @@ export const HeaderContainer = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 1px solid blue;
 `;
 
 export const Logo = styled.img`
