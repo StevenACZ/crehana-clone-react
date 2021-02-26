@@ -7,9 +7,18 @@ import {  ArrowLeftOutlined, ArrowRightOutlined, DownOutlined  } from '@ant-desi
 
 import { StyledPagination } from './Styles';
 
-export const Pagination = ({ pagination = [1,2,3,4,5] }) => {
+export const Pagination = ({
+  currentPage,
+  setCurrentPage,
+  coursesPerPage,
+  totalCourses
+}) => {
 
-  const [ currentPage, setCurrentPage ] = useState( 1 )
+  const pageNumbers = [];
+
+  for ( let i = 1; i <= Math.ceil( totalCourses / coursesPerPage ); i++ ) {
+    pageNumbers.push(i);
+  }
 
   // MENU PAGINATION
   function handleMenuClickPagination( e ) {
@@ -19,9 +28,9 @@ export const Pagination = ({ pagination = [1,2,3,4,5] }) => {
   const menuPagination = (
     <Menu onClick={ handleMenuClickPagination }>
       {
-        pagination.map( pag => (
-          <Menu.Item key={ pag }>
-            { pag }
+        pageNumbers.map( number => (
+          <Menu.Item key={ number }>
+            { number }
           </Menu.Item>
         ))
       }
@@ -35,7 +44,7 @@ export const Pagination = ({ pagination = [1,2,3,4,5] }) => {
   }
 
   function nextPage () {
-    if ( currentPage < pagination.length ) {
+    if ( currentPage < pageNumbers.length ) {
       setCurrentPage( currentPage + 1 );
     }
   }
@@ -54,7 +63,7 @@ export const Pagination = ({ pagination = [1,2,3,4,5] }) => {
         </CustomButton>
       </Dropdown>
 
-      <span>de { pagination.length }</span>
+      <span>de { pageNumbers.length }</span>
 
       <CustomButton outline={ 1 } onClick={ nextPage }>
         <ArrowRightOutlined />
