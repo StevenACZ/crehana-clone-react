@@ -9,7 +9,12 @@ export const CourseCatalog = styled.main`
   justify-content: center;
   gap: 56px;
 
+  @media (max-width: 1152px) {
+    padding: 0 20px;
+  }
+
   @media (max-width: 768px) {
+    padding: 0;
     margin: 0 auto;
     gap: 40px;
   }
