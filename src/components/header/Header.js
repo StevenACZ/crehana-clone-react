@@ -1,9 +1,13 @@
 import React from 'react';
 
-import LogoImg from '../../assets/images/logo.png';
+// Styles
+import { HeaderContainer, Logo, StyledHeader } from './Styles';
+
+// Components
 import { CustomButton } from '../button/CustomButton';
 
-import { HeaderContainer, Logo, StyledHeader } from './Styles';
+// Logo
+import LogoImg from '../../assets/images/logo.png';
 
 export const Header = () => {
   return (
