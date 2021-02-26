@@ -9,6 +9,7 @@ import { CoursesFilters } from '../../components/courses-filters/CoursesFilters'
 import { CoursesList } from '../../components/courses-list/CoursesList';
 
 import { courses } from '../../data/courses';
+import { Pagination } from '../../components/pagination/Pagination';
 
 export const CourseCatalogScreen = () => {
   
@@ -50,6 +51,14 @@ export const CourseCatalogScreen = () => {
     }
   }
 
+  const paginationNumber = ( coursesFiltered, nCards ) => {
+    let array = [];
+    for (let index = 1; index <= Math.round(Math.abs(coursesFiltered.length / nCards)); index++) {
+      array.push( index );
+    }
+    return array;
+  }
+
   const filtersParamsDefault = {
     category: 'Todos',
     subcategory: 'Todos',
@@ -65,9 +74,11 @@ export const CourseCatalogScreen = () => {
   } )
   const [ coursesFiltered, setCoursesFiltered ] = useState( courses )
   const [ filtersParams, setFilterParams ] = useState( filtersParamsDefault );
+  const [ cantPages, setCantPages ] = useState( [] )
 
   useEffect(() => {
     setCoursesFiltered( filterCourses( courses, filtersParams ) );
+    setCantPages(paginationNumber( coursesFiltered, 12 ));
   }, [ filtersParams ])
 
   useEffect(() => {
@@ -115,6 +126,8 @@ export const CourseCatalogScreen = () => {
         />
 
         <CoursesList courses={ coursesFiltered } />
+
+        <Pagination pagination={ cantPages } />
       </Courses>
     </CourseCatalog>
   )
