@@ -4,14 +4,19 @@ import React, { useState } from 'react'
 import {
   StyledCoursesFilters,
   StyledCoursesFiltersItem,
-  ButtonsContainer
+  ButtonsContainer,
+  ModalContent
 } from './Styles';
 
 // Components
 import { CustomButton } from '../button/CustomButton';
 
 // Components ANTD
-import { Menu, Dropdown } from 'antd';
+import {
+  Menu,
+  Dropdown,
+  Modal
+} from 'antd';
 
 // Icons ANTD
 import {
@@ -115,6 +120,22 @@ export const CoursesFilters = ({
     setFilterParams( params )
   }
 
+  // Modal
+  const [ isModalVisible, setIsModalVisible ] = useState( false );
+
+  const showModal = () => {
+    setIsModalVisible( true );
+  };
+
+  const handleOk = () => {
+    setIsModalVisible( false );
+    handleSubmitFiltersParams();
+  };
+
+  const handleCancel = () => {
+    setIsModalVisible( false );
+  };
+
   return (
     <StyledCoursesFilters>
       <StyledCoursesFiltersItem>
@@ -162,10 +183,62 @@ export const CoursesFilters = ({
           Aplicar filtros
         </CustomButton>
 
-        <CustomButton outline={ 3 }>
-          <FilterOutlined />F iltrar por
+        <CustomButton outline={ 3 } onClick={ showModal }>
+          <FilterOutlined />Filtrar por
         </CustomButton>
       </ButtonsContainer>
+    
+      <Modal
+        title="Aplicar filtros"
+        visible={ isModalVisible }
+        onOk={ handleOk }
+        okText="Buscar"
+        onCancel={ handleCancel }
+        cancelText="Cancelar"
+        centered
+      >
+        <ModalContent>
+          <StyledCoursesFiltersItem>
+            <span>Categoria</span>
+
+            <Dropdown overlay={ menuCategory }>
+              <CustomButton outline={ 1 } dropdown="true">
+                { params.category } <DownOutlined />
+              </CustomButton>
+            </Dropdown>
+          </StyledCoursesFiltersItem>
+
+          <StyledCoursesFiltersItem>
+            <span>SubCategoria</span>
+
+            <Dropdown overlay={ menuSubcategory }>
+              <CustomButton outline={ 1 } dropdown="true">
+                { params.subcategory } <DownOutlined />
+              </CustomButton>
+            </Dropdown>
+          </StyledCoursesFiltersItem>
+        
+          <StyledCoursesFiltersItem>
+            <span>Nivel</span>
+
+            <Dropdown overlay={ menuLevel }>
+              <CustomButton outline={ 1 } dropdown="true">
+                { params.level } <DownOutlined />
+              </CustomButton>
+            </Dropdown>
+          </StyledCoursesFiltersItem>
+
+          <StyledCoursesFiltersItem>
+            <span>Precio</span>
+
+            <Dropdown overlay={ menuPrice }>
+              <CustomButton outline={ 1 } dropdown="true">
+                { params.price } <DownOutlined />
+              </CustomButton>
+            </Dropdown>
+          </StyledCoursesFiltersItem>
+        </ModalContent>
+      </Modal>
     </StyledCoursesFilters>
   )
 }
