@@ -20,14 +20,14 @@ export const CoursesFilters = ({ filtersParams, setFilterParams }) => {
 
   const menuCategory = (
     <Menu onClick={handleMenuClickCategory}>
-      <Menu.Item key="item-1" icon={<UserOutlined />}>
-        1st menu item
+      <Menu.Item key="Video" icon={<UserOutlined />}>
+        Video
       </Menu.Item>
-      <Menu.Item key="item-2" icon={<UserOutlined />}>
-        2nd menu item
+      <Menu.Item key="Negocios" icon={<UserOutlined />}>
+        Negocios
       </Menu.Item>
-      <Menu.Item key="item-3" icon={<UserOutlined />}>
-        3rd menu item
+      <Menu.Item key="Marketing Digital" icon={<UserOutlined />}>
+        Marketing Digital
       </Menu.Item>
     </Menu>
   );
@@ -42,11 +42,11 @@ export const CoursesFilters = ({ filtersParams, setFilterParams }) => {
 
   const menuSubcategory = (
     <Menu onClick={ handleMenuClickSubcategory }>
-      <Menu.Item key="subitem-1" icon={<UserOutlined />}>
-        1st menu item
+      <Menu.Item key="Producción" icon={<UserOutlined />}>
+        Producción
       </Menu.Item>
-      <Menu.Item key="subitem-2" icon={<UserOutlined />}>
-        2nd menu item
+      <Menu.Item key="Locución" icon={<UserOutlined />}>
+        Locución
       </Menu.Item>
       <Menu.Item key="subitem-3" icon={<UserOutlined />}>
         3rd menu item
@@ -64,14 +64,14 @@ export const CoursesFilters = ({ filtersParams, setFilterParams }) => {
 
   const menuLevel = (
     <Menu onClick={ handleMenuClickLevel }>
-      <Menu.Item key="level-1" icon={<UserOutlined />}>
-        1st menu item
+      <Menu.Item key="Introductorio" icon={<UserOutlined />}>
+        Introductorio
       </Menu.Item>
-      <Menu.Item key="level-2" icon={<UserOutlined />}>
-        2nd menu item
+      <Menu.Item key="Completo" icon={<UserOutlined />}>
+        Completo
       </Menu.Item>
-      <Menu.Item key="level-3" icon={<UserOutlined />}>
-        3rd menu item
+      <Menu.Item key="Intermedio" icon={<UserOutlined />}>
+        Intermedio
       </Menu.Item>
     </Menu>
   );
