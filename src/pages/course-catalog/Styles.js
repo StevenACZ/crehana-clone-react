@@ -11,6 +11,7 @@ export const CourseCatalog = styled.main`
 
   @media (max-width: 768px) {
     margin: 0 auto;
+    gap: 40px;
   }
 `;
 
@@ -54,6 +55,10 @@ export const Categories = styled.section`
     font-weight: 900;
     margin: 0;
   }
+
+  @media (max-width: 768px) {
+    padding: 0 0 0 20px;
+  }
 `;
 
 export const CategoriesList = styled.ul`
@@ -95,5 +100,10 @@ export const Courses = styled.section`
     line-height: 28px;
     font-weight: 900;
     margin: 0;
+  }
+
+  @media (max-width: 768px) {
+    padding: 0 20px;
+    gap: 24px;
   }
 `;
