@@ -16,39 +16,63 @@ export const CourseCatalogScreen = () => {
 
   const filterCourses = ( courses, filtersParams ) => {
 
-    const categoryFilter = filtersParams.category === 'all' ? courses : courses.filter( course => course.category_name === filtersParams.category );
+    const categoryFilter = filtersParams.category === 'Todos' ? courses : courses.filter( course => course.category_name === filtersParams.category );
 
     let subcategoryFilter = categoryFilter;
-    if ( filtersParams.subcategory !== 'all' ) {
+    if ( filtersParams.subcategory !== 'Todos' ) {
       subcategoryFilter = categoryFilter.filter( course => course.subcategory_name === filtersParams.subcategory );
     }
 
     let levelFilter = subcategoryFilter;
-    if ( filtersParams.level !== 'all' ) {
+    if ( filtersParams.level !== 'Todos' ) {
       levelFilter = subcategoryFilter.filter( course => course.level === filtersParams.level );
     }
-
+    
     let priceFilter = levelFilter;
-    if ( filtersParams.price !== 'all' ) {
-      priceFilter = levelFilter.filter( course => course.price === filtersParams.price );
+    if ( filtersParams.price !== 'Todos' ) {
+      priceFilter = levelFilter.filter( course => course.price === parseFloat( filtersParams.price ) );
     }
 
     return priceFilter;
   }
 
-  const filtersParamsDefault = {
-    category: 'all',
-    subcategory: 'all',
-    level: 'all',
-    price: 'all'
+  const getAllFiltersData = ( courses ) => {
+    const allCategory = courses.map( course => course.category_name );
+    const allSubcategory = courses.map( course => course.subcategory_name );
+    const allLevel = courses.map( course => course.level );
+    const allPrice = courses.map( course => course.price );
+    
+    return {
+      allCategory: [ 'Todos', ...new Set(allCategory) ],
+      allSubcategory: [ 'Todos', ...new Set(allSubcategory) ],
+      allLevel: [ 'Todos', ...new Set(allLevel) ],
+      allPrice: [ 'Todos', ...new Set(allPrice) ]
+    }
   }
 
+  const filtersParamsDefault = {
+    category: 'Todos',
+    subcategory: 'Todos',
+    level: 'Todos',
+    price: 'Todos'
+  }
+
+  const [ allFiltersData, setAllFiltersData ] = useState( {
+    allCategory: [],
+    allSubcategory: [],
+    allLevel: [],
+    allPrice: []
+  } )
   const [ coursesFiltered, setCoursesFiltered ] = useState( courses )
   const [ filtersParams, setFilterParams ] = useState( filtersParamsDefault );
 
   useEffect(() => {
     setCoursesFiltered( filterCourses( courses, filtersParams ) );
   }, [ filtersParams ])
+
+  useEffect(() => {
+    setAllFiltersData(getAllFiltersData( courses ));
+  }, [ ])
 
   return (
     <CourseCatalog>
@@ -85,6 +109,7 @@ export const CourseCatalogScreen = () => {
         <h4>Title H4 - Listado de cursos</h4>
 
         <CoursesFilters
+          allFiltersData={ allFiltersData }
           filtersParams={ filtersParams }
           setFilterParams={ setFilterParams }
         />
