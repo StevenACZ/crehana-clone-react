@@ -6,7 +6,18 @@ import {  BarChartOutlined, UsergroupDeleteOutlined, StarFilled  } from '@ant-de
 
 import { CustomButton } from '../button/CustomButton';
 
-export const CoursesListItem = () => {
+export const CoursesListItem = ({
+  course_name,
+  category_name,
+  subcategory_name,
+  level,
+  username,
+  real_price,
+  price,
+  discount,
+  course_score,
+  users
+}) => {
   return (
     <StyledCoursesListItem>
       <Header>
@@ -15,23 +26,23 @@ export const CoursesListItem = () => {
 
       <Body>
         <BodyTop>
-          <h5>Nombre del curso</h5>
-          <p>Profesor del curso</p>
+          <h5>{ course_name }</h5>
+          <p>{ username }</p>
 
           <div>
             <IconContainer>
               <BarChartOutlined />
-              <span>Nivel 1</span>
+              <span>{ level }</span>
             </IconContainer>
 
             <IconContainer>
               <UsergroupDeleteOutlined />
-              <span>123 Usuarios</span>
+              <span>{ users } Usuarios</span>
             </IconContainer>
 
             <IconContainer>
               <StarFilled />
-              <span>4.8</span>
+              <span>{ course_score }</span>
             </IconContainer>
           </div>
         </BodyTop>
@@ -40,11 +51,11 @@ export const CoursesListItem = () => {
           <Price>
             <MainPrice>
               <span>co</span>
-              <p>$349,929</p>
+              <p>${ price }</p>
             </MainPrice>
 
             <SecondaryPrice>
-              CO$164,434
+              CO${ real_price }
             </SecondaryPrice>
           </Price>
 
