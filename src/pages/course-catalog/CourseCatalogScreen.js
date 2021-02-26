@@ -1,5 +1,10 @@
 import React, { useEffect, useState } from 'react';
 
+// IsMobile?
+import {
+  isMobile
+} from "react-device-detect";
+
 // Styles
 import {
   CourseCatalog,
@@ -77,7 +82,7 @@ export const CourseCatalogScreen = () => {
   const [ filtersParams, setFilterParams ] = useState( filtersParamsDefault );
   const [ coursesFiltered, setCoursesFiltered ] = useState( courses );
   const [ currentPage, setCurrentPage ] = useState(1);
-  const [ coursesPerPage ] = useState(8);
+  const [ coursesPerPage ] = useState( isMobile ? 4 : 8 );
 
   // Get current post
   const indexOfLastPost = currentPage * coursesPerPage;
