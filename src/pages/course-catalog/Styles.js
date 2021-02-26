@@ -30,14 +30,13 @@ export const Banner = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 24px;
 
   h2 {
     text-align: center;
     font-size: 40px;
     font-weight: 900;
     line-height: 44px;
-    margin: 0;
+    margin: 0 0 24px 0;
   }
 
   button {
@@ -53,13 +52,12 @@ export const Categories = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 16px;
-
+  
   h4 {
     font-size: 24px;
     line-height: 28px;
     font-weight: 900;
-    margin: 0;
+    margin: 0 0 16px 0;
   }
 
   @media (max-width: 768px) {
@@ -72,8 +70,8 @@ export const CategoriesList = styled.ul`
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  gap: 24px;
   overflow-x: scroll;
+  margin: 0;
 `;
 
 export const CategoriesItem = styled.li`
@@ -85,8 +83,12 @@ export const CategoriesItem = styled.li`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 8px;
+  margin: 0 24px 0 0;
   cursor: pointer;
+
+  img {
+    margin-bottom: 8px;
+  }
 
   span {
     font-size: 14px;
