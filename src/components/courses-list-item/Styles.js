@@ -33,6 +33,8 @@ export const Body = styled.div`
   gap: 12px;
   padding: 16px;
   background-color: #f6f7f9;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 `;
 
 export const BodyTop = styled.div`
