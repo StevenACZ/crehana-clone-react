@@ -8,13 +8,14 @@ export const CourseCatalog = styled.main`
   flex-direction: column;
   justify-content: center;
   gap: 56px;
+  padding: 0 0 40px 0;
 
   @media (max-width: 1152px) {
-    padding: 0 20px;
+    padding: 0 20px 40px 20px;
   }
 
   @media (max-width: 768px) {
-    padding: 0;
+    padding: 0 0 40px 0;
     margin: 0 auto;
     gap: 40px;
   }
