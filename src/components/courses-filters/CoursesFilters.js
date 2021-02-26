@@ -1,7 +1,11 @@
 import React, { useState } from 'react'
 
 // Styles
-import { StyledCoursesFilters, StyledCoursesFiltersItem } from './Styles';
+import {
+  StyledCoursesFilters,
+  StyledCoursesFiltersItem,
+  ButtonsContainer
+} from './Styles';
 
 // Components
 import { CustomButton } from '../button/CustomButton';
@@ -10,7 +14,11 @@ import { CustomButton } from '../button/CustomButton';
 import { Menu, Dropdown } from 'antd';
 
 // Icons ANTD
-import {  DownOutlined, UserOutlined  } from '@ant-design/icons';
+import {
+  DownOutlined,
+  UserOutlined,
+  FilterOutlined
+} from '@ant-design/icons';
 
 export const CoursesFilters = ({
   allFiltersData,
@@ -149,9 +157,15 @@ export const CoursesFilters = ({
         </Dropdown>
       </StyledCoursesFiltersItem>
 
-      <CustomButton onClick={ handleSubmitFiltersParams }>
-        Aplicar filtros
-      </CustomButton>
+      <ButtonsContainer>
+        <CustomButton onClick={ handleSubmitFiltersParams }>
+          Aplicar filtros
+        </CustomButton>
+
+        <CustomButton outline={ 3 }>
+          <FilterOutlined />F iltrar por
+        </CustomButton>
+      </ButtonsContainer>
     </StyledCoursesFilters>
   )
 }

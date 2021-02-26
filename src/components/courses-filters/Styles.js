@@ -5,6 +5,39 @@ export const StyledCoursesFilters = styled.div`
   align-items: flex-end;
   gap: 24px;
   grid-template-columns: repeat(5, 1fr);
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+
+    & > div {
+      display: none;
+    }
+  }
+`;
+
+export const ButtonsContainer = styled.nav`
+  & > button:first-child {
+    display: block;
+  }
+
+  & > button:last-child {
+    display: none;
+  }
+
+  @media (max-width: 768px) {
+    & > button:first-child {
+      display: none;
+    }
+
+    & > button:last-child {
+      width: 100%;
+      display: block;
+
+      span {
+        font-size: 18px;
+      }
+    }
+  }
 `;
 
 export const StyledCoursesFiltersItem = styled.div`
