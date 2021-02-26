@@ -1,12 +1,22 @@
 import React, { useState } from 'react'
 
-import { Menu, Dropdown } from 'antd';
-import {  DownOutlined, UserOutlined  } from '@ant-design/icons';
-
+// Styles
 import { StyledCoursesFilters, StyledCoursesFiltersItem } from './Styles';
+
+// Components
 import { CustomButton } from '../button/CustomButton';
 
-export const CoursesFilters = ({ allFiltersData, filtersParams, setFilterParams }) => {
+// Components ANTD
+import { Menu, Dropdown } from 'antd';
+
+// Icons ANTD
+import {  DownOutlined, UserOutlined  } from '@ant-design/icons';
+
+export const CoursesFilters = ({
+  allFiltersData,
+  filtersParams,
+  setFilterParams
+}) => {
 
   const { allCategory, allSubcategory, allLevel, allPrice } = allFiltersData;
 
