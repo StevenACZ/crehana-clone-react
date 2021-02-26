@@ -55,18 +55,17 @@ export const ButtonsContainer = styled.nav`
 export const StyledCoursesFiltersItem = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 8px;
-
-  span {
+  
+  & > span {
+    margin-bottom: 8px;
     font-size: 12px;
-    font-weight: 800;
+    font-weight: 700;
     line-height: 20px;
     text-transform: uppercase;
   }
 `;
 
 export const ModalContent = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+  display: grid;
+  grid-row-gap: 20px;
 `;
