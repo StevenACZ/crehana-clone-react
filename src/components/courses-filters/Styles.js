@@ -14,6 +14,10 @@ export const StyledCoursesFilters = styled.div`
       display: none;
     }
   }
+
+  & > div:last-child {
+    background-color: red !important;
+  }
 `;
 
 export const ButtonsContainer = styled.nav`
@@ -59,4 +63,10 @@ export const StyledCoursesFiltersItem = styled.div`
     line-height: 20px;
     text-transform: uppercase;
   }
+`;
+
+export const ModalContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 `;
