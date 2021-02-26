@@ -98,10 +98,8 @@ export const CategoriesItem = styled.li`
 `;
 
 export const Courses = styled.section`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 40px;
+  display: grid;
+  grid-row-gap: 40px;
 
   h4 {
     font-size: 24px;
@@ -112,6 +110,6 @@ export const Courses = styled.section`
 
   @media (max-width: 768px) {
     padding: 0 20px;
-    gap: 24px;
+    grid-row-gap: 24px;
   }
 `;
