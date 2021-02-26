@@ -1,15 +1,25 @@
 import React, { useEffect, useState } from 'react';
 
-import { CourseCatalog, Banner, Categories, CategoriesList, CategoriesItem, Courses } from './Styles';
+// Styles
+import {
+  CourseCatalog,
+  Banner,
+  Categories,
+  CategoriesList,
+  CategoriesItem,
+  Courses
+} from './Styles';
 
 import announcementIcon from '../../assets/images/announcement-icon.png';
 
+// Components
 import { CustomButton } from '../../components/button/CustomButton';
 import { CoursesFilters } from '../../components/courses-filters/CoursesFilters';
 import { CoursesList } from '../../components/courses-list/CoursesList';
-
-import { courses } from '../../data/courses';
 import { Pagination } from '../../components/pagination/Pagination';
+
+// Data
+import { courses } from '../../data/courses';
 
 export const CourseCatalogScreen = () => {
   
@@ -51,14 +61,6 @@ export const CourseCatalogScreen = () => {
     }
   }
 
-  const paginationNumber = ( coursesFiltered, nCards ) => {
-    let array = [];
-    for (let index = 1; index <= Math.round(Math.abs(coursesFiltered.length / nCards)); index++) {
-      array.push( index );
-    }
-    return array;
-  }
-
   const filtersParamsDefault = {
     category: 'Todos',
     subcategory: 'Todos',
@@ -72,13 +74,18 @@ export const CourseCatalogScreen = () => {
     allLevel: [],
     allPrice: []
   } )
-  const [ coursesFiltered, setCoursesFiltered ] = useState( courses )
   const [ filtersParams, setFilterParams ] = useState( filtersParamsDefault );
-  const [ cantPages, setCantPages ] = useState( [] )
+  const [ coursesFiltered, setCoursesFiltered ] = useState( courses );
+  const [ currentPage, setCurrentPage ] = useState(1);
+  const [ coursesPerPage ] = useState(8);
+
+  // Get current post
+  const indexOfLastPost = currentPage * coursesPerPage;
+  const indexOfFirstPost = indexOfLastPost - coursesPerPage;
+  const currentCourses = coursesFiltered.slice( indexOfFirstPost, indexOfLastPost );
 
   useEffect(() => {
     setCoursesFiltered( filterCourses( courses, filtersParams ) );
-    setCantPages(paginationNumber( coursesFiltered, 12 ));
   }, [ filtersParams ])
 
   useEffect(() => {
@@ -125,9 +132,14 @@ export const CourseCatalogScreen = () => {
           setFilterParams={ setFilterParams }
         />
 
-        <CoursesList courses={ coursesFiltered } />
+        <CoursesList courses={ currentCourses } />
 
-        <Pagination pagination={ cantPages } />
+        <Pagination
+          currentPage={ currentPage }
+          setCurrentPage={ setCurrentPage }
+          coursesPerPage={ coursesPerPage }
+          totalCourses={ coursesFiltered.length }
+        />
       </Courses>
     </CourseCatalog>
   )
