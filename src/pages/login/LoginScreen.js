@@ -21,12 +21,12 @@ import { types } from '../../types/types';
 
 export const LoginScreen = () => {
 
-  const { dispatch } = useContext( AuthContext )
+  const { dispatch } = useContext( AuthContext );
 
   const initialState = {
     email: '',
     password: ''
-  }
+  };
 
   const [ formValues, handleInputChange, reset ] = useForm( initialState );
 
@@ -43,7 +43,7 @@ export const LoginScreen = () => {
         }
       })
 
-      reset()
+      reset();
     }
   }
 
