@@ -1,7 +1,11 @@
 import React from 'react'
 
 // Styles
-import { StyledPagination } from './Styles';
+import {
+  StyledPagination,
+  MobilePagination,
+  DesktopPagination
+} from './Styles';
 
 // Components
 import { CustomButton } from '../button/CustomButton';
@@ -13,7 +17,9 @@ import { Menu, Dropdown } from 'antd';
 import {
   ArrowLeftOutlined,
   ArrowRightOutlined,
-  DownOutlined
+  DownOutlined,
+  LeftOutlined,
+  RightOutlined
 } from '@ant-design/icons';
 
 export const Pagination = ({
@@ -60,23 +66,41 @@ export const Pagination = ({
 
   return (
     <StyledPagination>
-      <CustomButton outline={ 1 } onClick={ prevPage }>
-        <ArrowLeftOutlined />
-      </CustomButton>
-
-      <span>Página</span>
-
-      <Dropdown overlay={ menuPagination }>
-        <CustomButton outline={ 1 } dropdown="true">
-          { currentPage } <DownOutlined />
+      <MobilePagination>
+        <CustomButton outline={ 1 } onClick={ prevPage }>
+          <LeftOutlined />
         </CustomButton>
-      </Dropdown>
 
-      <span>de { pageNumbers.length }</span>
+        <div>
+          <span>{ currentPage }</span>
+          <span>/</span>
+          <span>{ pageNumbers.length }</span>
+        </div>
 
-      <CustomButton outline={ 1 } onClick={ nextPage }>
-        <ArrowRightOutlined />
-      </CustomButton>
+        <CustomButton outline={ 1 } onClick={ nextPage }>
+          <RightOutlined />
+        </CustomButton>
+      </MobilePagination>
+
+      <DesktopPagination>
+        <CustomButton outline={ 1 } onClick={ prevPage }>
+          <ArrowLeftOutlined />
+        </CustomButton>
+
+        <span>Página</span>
+
+        <Dropdown overlay={ menuPagination }>
+          <CustomButton outline={ 1 } dropdown="true">
+            { currentPage } <DownOutlined />
+          </CustomButton>
+        </Dropdown>
+
+        <span>de { pageNumbers.length }</span>
+
+        <CustomButton outline={ 1 } onClick={ nextPage }>
+          <ArrowRightOutlined />
+        </CustomButton>
+      </DesktopPagination>
     </StyledPagination>
   )
 }
