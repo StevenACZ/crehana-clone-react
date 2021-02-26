@@ -6,6 +6,7 @@ export const CourseCatalog = styled.main`
   
   display: grid;
   grid-row-gap: 56px;
+  grid-template-columns: minmax(100px, 1fr);
   
   margin: 18px auto;
   padding: 0 0 40px 0;

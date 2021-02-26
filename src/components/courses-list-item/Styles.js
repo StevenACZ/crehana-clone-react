@@ -8,6 +8,7 @@ export const StyledCoursesListItem = styled.div`
 `;
 
 export const Header = styled.div`
+  width: 100%;
   height: 160px;
   background-color: #e8eaf0;
   position: relative;
@@ -28,9 +29,9 @@ export const Header = styled.div`
 `;
 
 export const Body = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
+  width: 100%;
+  display: grid;
+  grid-row-gap: 12px;
   padding: 16px;
   background-color: #f6f7f9;
   border-bottom-left-radius: 10px;
@@ -38,9 +39,9 @@ export const Body = styled.div`
 `;
 
 export const BodyTop = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+  width: 100%;
+  display: grid;
+  grid-row-gap: 8px;
 
   & > h5 {
     font-size: 16px;
@@ -59,36 +60,35 @@ export const BodyTop = styled.div`
   }
 
   & > div {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     align-items: center;
-    gap: 10px;
+    grid-column-gap: 10px;
   }
 `;
 
 export const IconContainer = styled.div`
-  display: flex;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   align-items: center;
-  gap: 4px;
+  grid-column-gap: 4px;
   color: #8d8d9d;
   font-size: 12px;
   line-height: 16px;
   font-weight: 600;
-
-  span {
-
-  }
 `;
 
 export const BodyBottom = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
+  display: grid;
+  grid-row-gap: 12px;
 `;
 
 export const Price = styled.div`
-  display: flex;
+  display: grid;
+  grid-template-columns: auto 1fr;
   align-items: center;
-  gap: 8px;
+  grid-column-gap: 8px;
 `;
 
 export const MainPrice = styled.div`
