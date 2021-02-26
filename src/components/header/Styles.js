@@ -16,6 +16,10 @@ export const StyledHeader = styled.header`
     display: none;
   }
 
+  @media (max-width: 1152px) {
+    padding: 0 20px;
+  }
+
   @media (max-width: 768px) {
     padding: 16px 12px;
     height: 56px;
