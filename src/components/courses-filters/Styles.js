@@ -7,6 +7,7 @@ export const StyledCoursesFilters = styled.div`
   grid-template-columns: repeat(5, 1fr);
 
   @media (max-width: 768px) {
+    height: 52px;
     grid-template-columns: 1fr;
 
     & > div {
@@ -16,7 +17,13 @@ export const StyledCoursesFilters = styled.div`
 `;
 
 export const ButtonsContainer = styled.nav`
+  display: flex;
+  align-items: flex-end;
+  height: 100%;
+  width: 100%;
+
   & > button:first-child {
+    width: 100%;
     display: block;
   }
 
@@ -31,6 +38,7 @@ export const ButtonsContainer = styled.nav`
 
     & > button:last-child {
       width: 100%;
+      height: 100%;
       display: block;
 
       span {
