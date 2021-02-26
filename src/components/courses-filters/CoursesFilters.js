@@ -6,29 +6,29 @@ import {  DownOutlined, UserOutlined  } from '@ant-design/icons';
 import { StyledCoursesFilters, StyledCoursesFiltersItem } from './Styles';
 import { CustomButton } from '../button/CustomButton';
 
-export const CoursesFilters = ({ filtersParams, setFilterParams }) => {
+export const CoursesFilters = ({ allFiltersData, filtersParams, setFilterParams }) => {
 
-  const [ params, setParams ] = useState( filtersParams )
+  const { allCategory, allSubcategory, allLevel, allPrice } = allFiltersData;
+
+  const [ params, setParams ] = useState( filtersParams );
 
   // MENU CATEGORY
   function handleMenuClickCategory( e ) {
     setParams( {
       ...params,
       category: e.key
-    } )
+    })
   }
 
   const menuCategory = (
-    <Menu onClick={handleMenuClickCategory}>
-      <Menu.Item key="Video" icon={<UserOutlined />}>
-        Video
-      </Menu.Item>
-      <Menu.Item key="Negocios" icon={<UserOutlined />}>
-        Negocios
-      </Menu.Item>
-      <Menu.Item key="Marketing Digital" icon={<UserOutlined />}>
-        Marketing Digital
-      </Menu.Item>
+    <Menu onClick={ handleMenuClickCategory }>
+      {
+        allCategory.map( category => (
+          <Menu.Item key={ category } icon={<UserOutlined />}>
+            { category }
+          </Menu.Item>
+        ))
+      }
     </Menu>
   );
 
@@ -42,15 +42,13 @@ export const CoursesFilters = ({ filtersParams, setFilterParams }) => {
 
   const menuSubcategory = (
     <Menu onClick={ handleMenuClickSubcategory }>
-      <Menu.Item key="Producción" icon={<UserOutlined />}>
-        Producción
-      </Menu.Item>
-      <Menu.Item key="Locución" icon={<UserOutlined />}>
-        Locución
-      </Menu.Item>
-      <Menu.Item key="subitem-3" icon={<UserOutlined />}>
-        3rd menu item
-      </Menu.Item>
+      {
+        allSubcategory.map( subcategory => (
+          <Menu.Item key={ subcategory } icon={<UserOutlined />}>
+            { subcategory }
+          </Menu.Item>
+        ))
+      }
     </Menu>
   );
   
@@ -64,15 +62,13 @@ export const CoursesFilters = ({ filtersParams, setFilterParams }) => {
 
   const menuLevel = (
     <Menu onClick={ handleMenuClickLevel }>
-      <Menu.Item key="Introductorio" icon={<UserOutlined />}>
-        Introductorio
-      </Menu.Item>
-      <Menu.Item key="Completo" icon={<UserOutlined />}>
-        Completo
-      </Menu.Item>
-      <Menu.Item key="Intermedio" icon={<UserOutlined />}>
-        Intermedio
-      </Menu.Item>
+      {
+        allLevel.map( level => (
+          <Menu.Item key={ level } icon={<UserOutlined />}>
+            { level }
+          </Menu.Item>
+        ))
+      }
     </Menu>
   );
 
@@ -86,15 +82,13 @@ export const CoursesFilters = ({ filtersParams, setFilterParams }) => {
 
   const menuPrice = (
     <Menu onClick={ handleMenuClickPrice }>
-      <Menu.Item key="price-1" icon={<UserOutlined />}>
-        1st menu item
-      </Menu.Item>
-      <Menu.Item key="price-2" icon={<UserOutlined />}>
-        2nd menu item
-      </Menu.Item>
-      <Menu.Item key="price-3" icon={<UserOutlined />}>
-        3rd menu item
-      </Menu.Item>
+      {
+        allPrice.map( price => (
+          <Menu.Item key={ price } icon={<UserOutlined />}>
+            ${ price }
+          </Menu.Item>
+        ))
+      }
     </Menu>
   );
 
