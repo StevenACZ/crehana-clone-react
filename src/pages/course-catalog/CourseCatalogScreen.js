@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import { CourseCatalog, Banner, Categories, CategoriesList, CategoriesItem, Courses } from './Styles';
 
@@ -8,9 +8,33 @@ import { CustomButton } from '../../components/button/CustomButton';
 import { CoursesFilters } from '../../components/courses-filters/CoursesFilters';
 import { CoursesList } from '../../components/courses-list/CoursesList';
 
-export const CourseCatalogScreen = () => {
+import { courses } from '../../data/courses';
 
+export const CourseCatalogScreen = () => {
+  
   const categoriesItem = [ 1, 2, 3, 4, 5, 6, 7, 8 ];
+
+  const filterCourses = ( courses, filtersParams ) => {
+
+    const categoryFilter = filtersParams.category === 'all' ? courses : courses.filter( course => course.category_name === filtersParams.category );
+
+    let subcategoryFilter = categoryFilter;
+    if ( filtersParams.subcategory !== 'all' ) {
+      subcategoryFilter = categoryFilter.filter( course => course.subcategory_name === filtersParams.subcategory );
+    }
+
+    let levelFilter = subcategoryFilter;
+    if ( filtersParams.level !== 'all' ) {
+      levelFilter = subcategoryFilter.filter( course => course.level === filtersParams.level );
+    }
+
+    let priceFilter = levelFilter;
+    if ( filtersParams.price !== 'all' ) {
+      priceFilter = levelFilter.filter( course => course.price === filtersParams.price );
+    }
+
+    return priceFilter;
+  }
 
   const filtersParamsDefault = {
     category: 'all',
@@ -19,9 +43,12 @@ export const CourseCatalogScreen = () => {
     price: 'all'
   }
 
+  const [ coursesFiltered, setCoursesFiltered ] = useState( courses )
   const [ filtersParams, setFilterParams ] = useState( filtersParamsDefault );
 
-  console.log( filtersParams );
+  useEffect(() => {
+    setCoursesFiltered( filterCourses( courses, filtersParams ) );
+  }, [ filtersParams ])
 
   return (
     <CourseCatalog>
@@ -62,7 +89,7 @@ export const CourseCatalogScreen = () => {
           setFilterParams={ setFilterParams }
         />
 
-        <CoursesList />
+        <CoursesList courses={ coursesFiltered } />
       </Courses>
     </CourseCatalog>
   )
