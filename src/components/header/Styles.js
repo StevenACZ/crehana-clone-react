@@ -39,3 +39,13 @@ export const Logo = styled.img`
   width: 163px;
   height: 24px;
 `;
+
+export const ButtonsContainer = styled.div`
+  width: 100%;
+  display: grid;
+  grid-row-gap: 15px;
+  
+  & > button {
+    width: 100%;
+  }
+`;
