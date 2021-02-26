@@ -1,11 +1,20 @@
-import React, { useState } from 'react'
+import React from 'react'
+
+// Styles
+import { StyledPagination } from './Styles';
+
+// Components
 import { CustomButton } from '../button/CustomButton';
 
+// Components ANTD
 import { Menu, Dropdown } from 'antd';
 
-import {  ArrowLeftOutlined, ArrowRightOutlined, DownOutlined  } from '@ant-design/icons';
-
-import { StyledPagination } from './Styles';
+// Icons ANTD
+import {
+  ArrowLeftOutlined,
+  ArrowRightOutlined,
+  DownOutlined
+} from '@ant-design/icons';
 
 export const Pagination = ({
   currentPage,
