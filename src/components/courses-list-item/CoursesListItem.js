@@ -1,20 +1,34 @@
 import React from 'react';
 
-import { Body, Header, StyledCoursesListItem, BodyTop, BodyBottom, IconContainer, Price, MainPrice, SecondaryPrice } from './Styles';
+// Styles
+import {
+  Body,
+  Header,
+  StyledCoursesListItem,
+  BodyTop,
+  BodyBottom,
+  IconContainer,
+  Price,
+  MainPrice,
+  SecondaryPrice
+} from './Styles';
 
-import {  BarChartOutlined, UsergroupDeleteOutlined, StarFilled  } from '@ant-design/icons';
-
+// Components
 import { CustomButton } from '../button/CustomButton';
+
+// Icons ANTD
+import {
+  BarChartOutlined,
+  UsergroupDeleteOutlined,
+  StarFilled
+} from '@ant-design/icons';
 
 export const CoursesListItem = ({
   course_name,
-  category_name,
-  subcategory_name,
   level,
   username,
   real_price,
   price,
-  discount,
   course_score,
   users
 }) => {
