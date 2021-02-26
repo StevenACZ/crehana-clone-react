@@ -8,6 +8,10 @@ export const CourseCatalog = styled.main`
   flex-direction: column;
   justify-content: center;
   gap: 56px;
+
+  @media (max-width: 768px) {
+    margin: 0 auto;
+  }
 `;
 
 export const Banner = styled.section`
