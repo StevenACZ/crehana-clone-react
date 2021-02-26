@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { HashRouter, Switch } from 'react-router-dom';
 
+// Auth
 import { AuthContext } from '../auth/AuthContext';
 import { PrivateRoute } from './PrivateRoute';
 import { PublicRoute } from './PublicRoute';
