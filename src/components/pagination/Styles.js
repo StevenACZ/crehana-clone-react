@@ -6,7 +6,7 @@ export const StyledPagination = styled.div`
   }
 
   & > div:last-child {
-    display: flex;
+    display: grid;
   }
 
   @media (max-width: 768px) {
@@ -24,7 +24,6 @@ export const MobilePagination = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 24px;
 
   & > button {
     border: none;
@@ -32,8 +31,9 @@ export const MobilePagination = styled.div`
   }
 
   & > div {
-    display: flex;
-    gap: 5px;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-column-gap: 5px;
 
     span {
       font-size: 16px;
@@ -47,10 +47,11 @@ export const MobilePagination = styled.div`
 `;
 
 export const DesktopPagination = styled.div`
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(5, auto);
   justify-content: flex-end;
   align-items: center;
-  gap: 24px;
+  grid-column-gap: 24px;
 
   & > button {
     padding: 14px;
