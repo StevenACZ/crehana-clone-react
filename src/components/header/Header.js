@@ -1,7 +1,7 @@
 import React from 'react';
 
 // Styles
-import { HeaderContainer, Logo, StyledHeader } from './Styles';
+import { Logo, StyledHeader } from './Styles';
 
 // Components
 import { CustomButton } from '../button/CustomButton';
@@ -9,16 +9,24 @@ import { CustomButton } from '../button/CustomButton';
 // Logo
 import LogoImg from '../../assets/images/logo.png';
 
+// Icons ANTD
+import {
+  MenuOutlined,
+  SearchOutlined
+} from '@ant-design/icons';
+
 export const Header = () => {
   return (
     <StyledHeader>
-      <HeaderContainer>
-        <Logo src={ LogoImg } />
+      <MenuOutlined />      
 
-        <CustomButton outline={ 3 }>
-          Registrate gratis
-        </CustomButton>
-      </HeaderContainer>
+      <Logo src={ LogoImg } />
+
+      <SearchOutlined />
+
+      <CustomButton outline={ 3 }>
+        Registrate gratis
+      </CustomButton>
     </StyledHeader>
   )
 }
