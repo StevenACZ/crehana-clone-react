@@ -1,12 +1,23 @@
 import React, { useContext } from 'react';
 
+// Styles
+import {
+  BtnSubmit,
+  Login,
+  LoginContainer,
+  LoginForm,
+  LoginFormContainer,
+  LoginFormInput,
+  LoginFormItem,
+  LoginFormSpan
+} from './Styles';
+
+// Custom Hooks
 import useForm from '../../customHooks/useForm';
 
+// Others
 import { AuthContext } from '../../auth/AuthContext';
 import { types } from '../../types/types';
-
-// Styles
-import { BtnSubmit, Login, LoginContainer, LoginForm, LoginFormContainer, LoginFormInput, LoginFormItem, LoginFormSpan } from './Styles';
 
 export const LoginScreen = () => {
 
