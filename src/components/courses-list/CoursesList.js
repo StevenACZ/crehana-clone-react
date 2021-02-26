@@ -4,21 +4,17 @@ import { StyledCoursesList } from './Styles';
 
 import { CoursesListItem } from '../courses-list-item/CoursesListItem';
 
-export const CoursesList = () => {
+export const CoursesList = ({ courses }) => {
   return (
     <StyledCoursesList>
-      <CoursesListItem />
-      <CoursesListItem />
-      <CoursesListItem />
-      <CoursesListItem />
-      <CoursesListItem />
-      <CoursesListItem />
-      <CoursesListItem />
-      <CoursesListItem />
-      <CoursesListItem />
-      <CoursesListItem />
-      <CoursesListItem />
-      <CoursesListItem />
+      {
+        courses.map( course => (
+          <CoursesListItem
+            key={ course.id }
+            { ...course }
+          />
+        ))
+      }
     </StyledCoursesList>
   )
 }
