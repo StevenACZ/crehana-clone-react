@@ -3,11 +3,11 @@ import styled from 'styled-components';
 export const CourseCatalog = styled.main`
   max-width: 1152px;
   height: 100%;
+  
+  display: grid;
+  grid-row-gap: 56px;
+  
   margin: 18px auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 56px;
   padding: 0 0 40px 0;
 
   @media (max-width: 1152px) {
@@ -15,9 +15,9 @@ export const CourseCatalog = styled.main`
   }
 
   @media (max-width: 768px) {
+    grid-row-gap: 40px;
     padding: 0 0 40px 0;
     margin: 0 auto;
-    gap: 40px;
   }
 `;
 
