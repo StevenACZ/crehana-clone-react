@@ -1,10 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 // Styles
-import { Logo, StyledHeader } from './Styles';
+import {
+  Logo,
+  StyledHeader,
+  ButtonsContainer
+} from './Styles';
 
 // Components
 import { CustomButton } from '../button/CustomButton';
+
+// Components ANTD
+import { Drawer } from 'antd';
 
 // Logo
 import LogoImg from '../../assets/images/logo.png';
@@ -16,9 +23,45 @@ import {
 } from '@ant-design/icons';
 
 export const Header = () => {
+
+  const [ visible, setVisible ] = useState( false );
+
+  const showDrawer = () => {
+    setVisible( true );
+  };
+  
+  const onClose = () => {
+    setVisible( false );
+  };
+
   return (
     <StyledHeader>
-      <MenuOutlined />      
+      <MenuOutlined onClick={ showDrawer } />
+
+      <Drawer
+          placement="left"
+          closable={ false }
+          onClose={ onClose }
+          visible={ visible }
+        >
+          <ButtonsContainer>
+            <CustomButton>
+              Loggout
+            </CustomButton>
+
+            <CustomButton outline={ 3 }>
+              Registrate gratis
+            </CustomButton>
+
+            <CustomButton outline={ 3 }>
+              Sobre nosotros
+            </CustomButton>
+
+            <CustomButton outline={ 3 }>
+              Cursos
+            </CustomButton>
+          </ButtonsContainer>
+        </Drawer>
 
       <Logo src={ LogoImg } />
 
