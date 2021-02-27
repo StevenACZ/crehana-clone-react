@@ -2,8 +2,8 @@ import styled from 'styled-components';
 
 export const StyledCourseGeneralActions = styled.div`
   width: 100%;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  justify-content: space-between;
 `;
 
 export const Action = styled.div`
