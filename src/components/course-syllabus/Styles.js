@@ -3,6 +3,12 @@ import styled from 'styled-components';
 export const StyledCourseSyllabus = styled.section`
   background-color: #f6f7f9;
   width: 100%;
+
+  margin-top: -40px;
+  
+  @media (max-width: 768px) {
+    margin-top: 0px;
+  }
 `;
 
 export const StyledCourseSyllabusContainer = styled.div`
