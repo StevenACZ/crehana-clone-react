@@ -10,6 +10,7 @@ export const StyledTeacherGeneralData = styled.div`
     height: 64px;
     border-radius: 10px;
     margin-right: 16px;
+    cursor: pointer;
   }
 
   div:last-child {
