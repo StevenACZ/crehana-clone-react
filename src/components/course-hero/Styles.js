@@ -2,8 +2,9 @@ import styled from 'styled-components';
 
 // Desktop
 export const DesktopCourseHero = styled.section`
-  width: 100%;
   height: 100%;
+  max-width: 1152px;
+  margin: 41px auto 0 auto;
 
   display: flex;
   justify-content: space-between;
