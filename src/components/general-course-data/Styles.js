@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const StyledGeneralCourseData = styled.div`
   display: grid;
-  grid-template-columns: repeat(3, auto);
+  grid-template-columns: repeat(3, 1fr);
   align-items: center;
   grid-column-gap: 10px;
 `;
@@ -10,7 +10,7 @@ export const StyledGeneralCourseData = styled.div`
 export const IconContainer = styled.div`
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, auto);
   align-items: center;
   grid-column-gap: 4px;
   color: #8d8d9d;
