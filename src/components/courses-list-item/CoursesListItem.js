@@ -7,14 +7,12 @@ import {
   StyledCoursesListItem,
   BodyTop,
   BodyBottom,
-  Price,
-  MainPrice,
-  SecondaryPrice
 } from './Styles';
 
 // Components
 import { CustomButton } from '../button/CustomButton';
 import { GeneralCourseData } from '../general-course-data/GeneralCourseData';
+import { CoursePrice } from '../course-price/CoursePrice';
 
 export const CoursesListItem = ({
   course_name,
@@ -43,17 +41,12 @@ export const CoursesListItem = ({
           />
         </BodyTop>
 
-        <BodyBottom>
-          <Price>
-            <MainPrice>
-              <span>co</span>
-              <p>${ price }</p>
-            </MainPrice>
-
-            <SecondaryPrice>
-              CO${ real_price }
-            </SecondaryPrice>
-          </Price>
+        <BodyBottom>          
+          <CoursePrice
+            price={ price }
+            real_price={ real_price }
+            size="1"
+          />
 
           <CustomButton>
             Compra ahora
