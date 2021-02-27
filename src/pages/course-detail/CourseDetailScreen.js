@@ -13,6 +13,7 @@ import {
 // Components
 import { CourseHero } from '../../components/course-hero/CourseHero';
 import { CourseSyllabus } from '../../components/course-syllabus/CourseSyllabus';
+import { CourseSummary } from '../../components/course-summary/CourseSummary';
 
 export const CourseDetailScreen = () => {
   return (
@@ -21,11 +22,9 @@ export const CourseDetailScreen = () => {
 
       <CourseSyllabus />
       
-      {/* <CourseSummary>
+      <CourseSummary />
 
-      </CourseSummary>
-
-      <CourseProjects>
+      {/* <CourseProjects>
 
       </CourseProjects>
 
