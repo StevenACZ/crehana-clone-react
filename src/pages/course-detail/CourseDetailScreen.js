@@ -11,7 +11,6 @@ import {
 } from './Styles';
 
 // Components
-// import { CustomButton } from '../../components/button/CustomButton';
 import { CourseHero } from '../../components/course-hero/CourseHero';
 import { CourseSyllabus } from '../../components/course-syllabus/CourseSyllabus';
 
