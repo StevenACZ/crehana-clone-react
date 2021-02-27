@@ -13,17 +13,16 @@ import {
 // Components
 // import { CustomButton } from '../../components/button/CustomButton';
 import { CourseHero } from '../../components/course-hero/CourseHero';
+import { CourseSyllabus } from '../../components/course-syllabus/CourseSyllabus';
 
 export const CourseDetailScreen = () => {
   return (
     <CourseDetail>
       <CourseHero />
 
-      {/* <CourseSyllabus>
-
-      </CourseSyllabus>
+      <CourseSyllabus />
       
-      <CourseSummary>
+      {/* <CourseSummary>
 
       </CourseSummary>
 
