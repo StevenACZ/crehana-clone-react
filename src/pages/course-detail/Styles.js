@@ -9,5 +9,6 @@ export const CourseDetail = styled.main`
   }
 
   @media (max-width: 768px) {
+    margin: 0px auto;
   }
 `;

@@ -1,16 +1,12 @@
 import styled from 'styled-components';
 
+// Desktop
 export const DesktopCourseHero = styled.section`
   width: 100%;
   height: 100%;
 
   display: flex;
   justify-content: space-between;
-`;
-
-export const MobileCourseHero = styled.section`
-  width: 100%;
-  height: 100%;
 `;
 
 export const HeroInformation = styled.div`
@@ -74,4 +70,54 @@ export const HeroCard = styled.div`
     }
   }
 
+`;
+
+// Mobile
+export const MobileCourseHero = styled.section`
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: 320px;
+  grid-auto-rows: auto;
+
+  /* TeacherGeneralData */
+  .sc-cxFLnm.hEjgkQ {
+    padding: 0 20px;
+    margin: 42px 0;
+  }
+  
+  /* CourseGeneralActions */
+  .sc-lmoMRL.cdgfBi {
+    padding: 0 20px;
+    margin: 40px 0;
+  }
+`;
+
+export const MobileHeroInformation = styled.div`
+  padding: 26px 20px 0;
+
+  & > h2 {
+    font-size: 32px;
+    font-weight: 900;
+    line-height: 44px;
+    margin: 0 0 16px 0;
+  }
+  
+  & > p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    margin: 16px 0 16px 0;
+  }
+`;
+
+export const MobileButtonsContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  background-color: #e8eaf0;
+  padding: 24px 20px;
+
+  & > button:first-child {
+    margin-bottom: 24px;
+  }
 `;
