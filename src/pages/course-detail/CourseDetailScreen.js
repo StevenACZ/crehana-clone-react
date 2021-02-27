@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 // IsMobile?
 import {
@@ -12,11 +12,32 @@ import {
 
 // Components
 import { CustomButton } from '../../components/button/CustomButton';
+import { CourseHero } from '../../components/course-hero/CourseHero';
 
 export const CourseDetailScreen = () => {
   return (
     <CourseDetail>
+      <CourseHero />
+
+      {/* <CourseSyllabus>
+
+      </CourseSyllabus>
       
+      <CourseSummary>
+
+      </CourseSummary>
+
+      <CourseProjects>
+
+      </CourseProjects>
+
+      <CourseRatings>
+
+      </CourseRatings>
+
+      <CourseQuestions>
+
+      </CourseQuestions> */}
     </CourseDetail>
   )
 }
