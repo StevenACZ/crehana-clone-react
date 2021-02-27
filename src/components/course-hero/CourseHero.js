@@ -43,7 +43,10 @@ export const CourseHero = () => {
               course_score="4.8"
             />
 
-            <TeacherGeneralData />
+            <TeacherGeneralData
+              teacher_name="Subtitle 3 - Nombre profesor"
+              teacer_position="body 3 - Cargo profesor"
+            />
 
             <CourseGeneralActions />
           </HeroInformation>
