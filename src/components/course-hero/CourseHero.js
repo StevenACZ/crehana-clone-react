@@ -10,6 +10,7 @@ import {
 // Components
 import { GeneralCourseData } from '../general-course-data/GeneralCourseData';
 import { TeacherGeneralData } from '../teacher-general-data/TeacherGeneralData';
+import { CourseGeneralActions } from '../course-general-actions/CourseGeneralActions';
 
 // Styles
 import {
@@ -38,6 +39,7 @@ export const CourseHero = () => {
 
             <TeacherGeneralData />
 
+            <CourseGeneralActions />
           </HeroInformation>
 
           <HeroCard>
