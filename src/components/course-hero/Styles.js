@@ -81,13 +81,13 @@ export const MobileCourseHero = styled.section`
   grid-auto-rows: auto;
 
   /* TeacherGeneralData */
-  .sc-cxFLnm.hEjgkQ {
+  & > div:nth-child(3) {
     padding: 0 20px;
     margin: 42px 0;
   }
   
   /* CourseGeneralActions */
-  .sc-lmoMRL.cdgfBi {
+  & > div:nth-child(5) {
     padding: 0 20px;
     margin: 40px 0;
   }
