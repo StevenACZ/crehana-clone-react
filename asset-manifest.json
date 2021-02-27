@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/crehana-clone-react/static/css/main.d74021e7.chunk.css",
-    "main.js": "/crehana-clone-react/static/js/main.6a86649a.chunk.js",
-    "main.js.map": "/crehana-clone-react/static/js/main.6a86649a.chunk.js.map",
+    "main.js": "/crehana-clone-react/static/js/main.53509d53.chunk.js",
+    "main.js.map": "/crehana-clone-react/static/js/main.53509d53.chunk.js.map",
     "runtime-main.js": "/crehana-clone-react/static/js/runtime-main.13183631.js",
     "runtime-main.js.map": "/crehana-clone-react/static/js/runtime-main.13183631.js.map",
     "static/css/2.1e58ee36.chunk.css": "/crehana-clone-react/static/css/2.1e58ee36.chunk.css",
-    "static/js/2.0a99c4f4.chunk.js": "/crehana-clone-react/static/js/2.0a99c4f4.chunk.js",
-    "static/js/2.0a99c4f4.chunk.js.map": "/crehana-clone-react/static/js/2.0a99c4f4.chunk.js.map",
+    "static/js/2.134340cd.chunk.js": "/crehana-clone-react/static/js/2.134340cd.chunk.js",
+    "static/js/2.134340cd.chunk.js.map": "/crehana-clone-react/static/js/2.134340cd.chunk.js.map",
     "index.html": "/crehana-clone-react/index.html",
     "static/css/2.1e58ee36.chunk.css.map": "/crehana-clone-react/static/css/2.1e58ee36.chunk.css.map",
     "static/css/main.d74021e7.chunk.css.map": "/crehana-clone-react/static/css/main.d74021e7.chunk.css.map",
-    "static/js/2.0a99c4f4.chunk.js.LICENSE.txt": "/crehana-clone-react/static/js/2.0a99c4f4.chunk.js.LICENSE.txt"
+    "static/js/2.134340cd.chunk.js.LICENSE.txt": "/crehana-clone-react/static/js/2.134340cd.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.13183631.js",
     "static/css/2.1e58ee36.chunk.css",
-    "static/js/2.0a99c4f4.chunk.js",
+    "static/js/2.134340cd.chunk.js",
     "static/css/main.d74021e7.chunk.css",
-    "static/js/main.6a86649a.chunk.js"
+    "static/js/main.53509d53.chunk.js"
   ]
 }
