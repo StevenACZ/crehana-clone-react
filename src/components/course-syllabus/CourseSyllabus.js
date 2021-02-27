@@ -8,6 +8,9 @@ import {
   MoreButton
 } from './Styles';
 
+// Components
+import { CustomButton } from '../button/CustomButton';
+
 // Icons ANTD
 import {
   EyeInvisibleFilled,
@@ -41,10 +44,9 @@ export const CourseSyllabus = () => {
           <li>Break 1: Subete al robot <EyeInvisibleFilled /></li>
         </Module>
 
-        <MoreButton>
-          <span>textlink</span>
-          <DownOutlined />
-        </MoreButton>
+        <CustomButton anchorLink="true">
+          textlink <DownOutlined />
+        </CustomButton>
       </StyledCourseSyllabusContainer>
     </StyledCourseSyllabus>
   )
