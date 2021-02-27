@@ -13,6 +13,7 @@ export const Action = styled.div`
   font-size: 16px;
   color: #8d8d9d;
   font-weight: 700;
+  cursor: pointer;
 
   & > span:last-child {
     margin-top: 8px;
