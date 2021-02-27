@@ -7,7 +7,6 @@ import {
   StyledCoursesListItem,
   BodyTop,
   BodyBottom,
-  IconContainer,
   Price,
   MainPrice,
   SecondaryPrice
@@ -15,13 +14,7 @@ import {
 
 // Components
 import { CustomButton } from '../button/CustomButton';
-
-// Icons ANTD
-import {
-  BarChartOutlined,
-  UsergroupDeleteOutlined,
-  StarFilled
-} from '@ant-design/icons';
+import { GeneralCourseData } from '../general-course-data/GeneralCourseData';
 
 export const CoursesListItem = ({
   course_name,
@@ -43,22 +36,12 @@ export const CoursesListItem = ({
           <h5>{ course_name }</h5>
           <p>{ username }</p>
 
-          <div>
-            <IconContainer>
-              <BarChartOutlined />
-              <span>{ level }</span>
-            </IconContainer>
+          <GeneralCourseData
+            level={ level }
+            users={ users }
+            course_score={ course_score }
+          />
 
-            <IconContainer>
-              <UsergroupDeleteOutlined />
-              <span>{ users } Usuarios</span>
-            </IconContainer>
-
-            <IconContainer>
-              <StarFilled />
-              <span>{ course_score }</span>
-            </IconContainer>
-          </div>
         </BodyTop>
 
         <BodyBottom>
