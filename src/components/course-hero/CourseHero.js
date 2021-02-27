@@ -21,6 +21,7 @@ import {
   HeroInformation,
   HeroCard
 } from './Styles';
+import { CustomButton } from '../button/CustomButton';
 
 export const CourseHero = () => {
   return (
@@ -50,11 +51,23 @@ export const CourseHero = () => {
           <HeroCard>
             <CourseVideo />
 
-            <CoursePrice
-              price="349,929"
-              real_price="164,434"
-              size="2"
-            />
+            <div>
+              <CoursePrice
+                price="349,929"
+                real_price="164,434"
+                size="2"
+              />
+
+              <nav>
+                <CustomButton>
+                  Comprar ahora
+                </CustomButton>
+
+                <CustomButton outline={ 3 }>
+                  Agregar a carrito
+                </CustomButton>
+              </nav>
+            </div>
           </HeroCard>
         </DesktopCourseHero>
       </BrowserView>

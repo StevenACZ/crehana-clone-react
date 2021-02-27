@@ -49,6 +49,29 @@ export const HeroInformation = styled.div`
 `;
 
 export const HeroCard = styled.div`
-  width: 100%;
-  height: 100%;
+  width: 464px;
+  height: auto;
+
+  /* CourseVideo */
+  & > div:first-child {
+    height: 274px;
+  }
+
+  /* div */
+  & > div:last-child {
+    padding: 30px 24px 24px 24px;
+    background-color: #e8eaf0;
+    border-radius: 0 0 10px 10px;
+
+    & > nav {
+      margin-top: 15px;
+      display: flex;
+      flex-direction: column;
+
+      & > button:first-child {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
 `;
