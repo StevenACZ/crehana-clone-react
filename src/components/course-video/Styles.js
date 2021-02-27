@@ -13,7 +13,9 @@ export const StyledCourseVideo = styled.div`
     transform: translate(-50%, -50%);
     color: white;
     display: flex;
+    width: 100%;
     flex-direction: column;
+    align-items: center;
     font-weight: 900;
     font-size: 40px;
     cursor: pointer;
