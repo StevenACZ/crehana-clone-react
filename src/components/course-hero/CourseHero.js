@@ -12,6 +12,7 @@ import { GeneralCourseData } from '../general-course-data/GeneralCourseData';
 import { TeacherGeneralData } from '../teacher-general-data/TeacherGeneralData';
 import { CourseGeneralActions } from '../course-general-actions/CourseGeneralActions';
 import { CoursePrice } from '../course-price/CoursePrice';
+import { CourseVideo } from '../course-video/CourseVideo';
 
 // Styles
 import {
@@ -47,6 +48,8 @@ export const CourseHero = () => {
           </HeroInformation>
 
           <HeroCard>
+            <CourseVideo />
+
             <CoursePrice
               price="349,929"
               real_price="164,434"
