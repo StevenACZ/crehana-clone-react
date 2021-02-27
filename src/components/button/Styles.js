@@ -18,7 +18,7 @@ export const StyledButton = styled( Button )`
     outline === 1
       &&
         `
-          background-color: white;
+          background-color: transparent;
           color: black;
           border: 1px solid #181b32;
         `
@@ -28,7 +28,7 @@ export const StyledButton = styled( Button )`
     outline === 3
       &&
         `
-          background-color: white;
+          background-color: transparent;
           color: black;
           border: 3px solid #181b32;
         `
