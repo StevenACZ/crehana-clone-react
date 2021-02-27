@@ -2,7 +2,7 @@ import React from 'react';
 
 // IsMobile?
 import {
-  isMobile
+  // isMobile
 } from "react-device-detect";
 
 // Styles
@@ -11,7 +11,7 @@ import {
 } from './Styles';
 
 // Components
-import { CustomButton } from '../../components/button/CustomButton';
+// import { CustomButton } from '../../components/button/CustomButton';
 import { CourseHero } from '../../components/course-hero/CourseHero';
 
 export const CourseDetailScreen = () => {
