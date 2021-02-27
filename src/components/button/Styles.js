@@ -14,6 +14,18 @@ export const StyledButton = styled( Button )`
   line-height: 16px;
   font-weight: 800;
 
+  ${({ anchorLink }) =>
+    anchorLink === "true"
+      &&
+        `
+          padding: 0;
+          background-color: transparent;
+          color: black;
+          border: none;
+          height: auto;
+        `
+  }
+
   ${({ outline }) =>
     outline === 1
       &&
@@ -38,7 +50,7 @@ export const StyledButton = styled( Button )`
     dropdown === "true"
       &&
         `
-          background-color: white;
+          background-color: transparent;
           color: black;
           border: 1px solid #8d8d9d;
           display: flex;
