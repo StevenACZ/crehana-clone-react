@@ -58,25 +58,6 @@ export const BodyTop = styled.div`
     color: #181b32;
     margin: 0;
   }
-
-  & > div {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    align-items: center;
-    grid-column-gap: 10px;
-  }
-`;
-
-export const IconContainer = styled.div`
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  align-items: center;
-  grid-column-gap: 4px;
-  color: #8d8d9d;
-  font-size: 12px;
-  line-height: 16px;
-  font-weight: 600;
 `;
 
 export const BodyBottom = styled.div`
