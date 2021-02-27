@@ -6,7 +6,10 @@ import {
   MobileView,
   // isMobile
 } from "react-device-detect";
+
+// Components
 import { GeneralCourseData } from '../general-course-data/GeneralCourseData';
+import { TeacherGeneralData } from '../teacher-general-data/TeacherGeneralData';
 
 // Styles
 import {
@@ -33,7 +36,7 @@ export const CourseHero = () => {
               course_score="4.8"
             />
 
-            {/* <CourseOptions /> */}
+            <TeacherGeneralData />
 
           </HeroInformation>
 
