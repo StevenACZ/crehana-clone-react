@@ -41,7 +41,6 @@ export const CoursesListItem = ({
             users={ users }
             course_score={ course_score }
           />
-
         </BodyTop>
 
         <BodyBottom>
