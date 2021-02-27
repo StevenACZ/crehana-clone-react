@@ -65,19 +65,3 @@ export const Module = styled.ol`
     }
   }
 `;
-
-export const MoreButton = styled.button`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: none;
-  background-color: transparent;
-  font-size: 16px;
-  font-weight: 800;
-
-  cursor: pointer;
-
-  & > span:first-child {
-    margin-right: 8px;
-  }
-`;
