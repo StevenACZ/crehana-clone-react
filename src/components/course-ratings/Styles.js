@@ -23,7 +23,7 @@ export const StyledCourseRatings = styled.section`
 `;
 
 export const Ratings = styled.div`
-  max-width: 600px;
+  max-width: 480px;
   display: grid;
   grid-template-columns: auto 1fr;
   grid-column-gap: 40px;
@@ -68,5 +68,6 @@ export const General = styled.div`
 `;
 
 export const BestComment = styled.div`
-  max-width: 650px;
+  max-width: 550px;
+  margin-top: 33px;
 `;
