@@ -54,7 +54,7 @@ export const CourseRatings = () => {
         <Comment />
       </BestComment>
 
-      <CustomButton anchorLink="true">
+      <CustomButton anchorlink="true">
         textlink <DownOutlined />
       </CustomButton>
     </StyledCourseRatings>
