@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const StyledCourseRatings = styled.section`
   max-width: 1152px;
-  margin: 0 auto;
+  margin: 48px auto 0 auto;
 
   & > h3 {
     font-size: 32px;
@@ -23,8 +23,16 @@ export const StyledCourseRatings = styled.section`
 `;
 
 export const Ratings = styled.div`
-  display: flex;
-  width: 100%;
+  max-width: 600px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-column-gap: 40px;
+
+  @media (max-width: 768px) {
+    grid-template-columns: auto;
+    grid-template-rows: auto auto; 
+    grid-row-gap: 24px;
+  }
 `;
 
 export const TotalAverage = styled.div`
@@ -60,5 +68,5 @@ export const General = styled.div`
 `;
 
 export const BestComment = styled.div`
-  
+  max-width: 650px;
 `;
