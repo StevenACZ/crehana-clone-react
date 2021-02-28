@@ -1,10 +1,5 @@
 import React from 'react';
 
-// IsMobile?
-import {
-  // isMobile
-} from "react-device-detect";
-
 // Styles
 import {
   CourseDetail,
