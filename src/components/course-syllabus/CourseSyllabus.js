@@ -43,7 +43,7 @@ export const CourseSyllabus = () => {
           <li>Break 1: Subete al robot <EyeInvisibleFilled /></li>
         </Module>
 
-        <CustomButton anchorLink="true">
+        <CustomButton anchorlink="true">
           textlink <DownOutlined />
         </CustomButton>
       </StyledCourseSyllabusContainer>
