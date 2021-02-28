@@ -26,6 +26,7 @@ export const ProgressBar = ({
         <StarFilled />
         <StarFilled />
         <StarFilled />
+        <StarOutlined />
         <span>{ percent }%</span>
       </div>
     </StyledProgressBar>
