@@ -41,9 +41,11 @@ export const CourseRatings = () => {
         </TotalAverage>
 
         <General>
-          <ProgressBar percent={ 100 }/>
+          <ProgressBar percent={ 90 }/>
           <ProgressBar percent={ 50 }/>
           <ProgressBar percent={ 20 }/>
+          <ProgressBar percent={ 10 }/>
+          <ProgressBar percent={ 15 }/>
         </General>
       </Ratings>
 
