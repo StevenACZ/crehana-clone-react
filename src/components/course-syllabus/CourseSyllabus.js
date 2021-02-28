@@ -5,17 +5,16 @@ import {
   StyledCourseSyllabus,
   Module,
   StyledCourseSyllabusContainer,
-  MoreButton
 } from './Styles';
-
-// Components
-import { CustomButton } from '../button/CustomButton';
 
 // Icons ANTD
 import {
   EyeInvisibleFilled,
   DownOutlined,
 } from '@ant-design/icons';
+
+// Components
+import { CustomButton } from '../button/CustomButton';
 
 export const CourseSyllabus = () => {
   return (
