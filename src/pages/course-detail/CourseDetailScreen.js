@@ -14,6 +14,7 @@ import {
 import { CourseHero } from '../../components/course-hero/CourseHero';
 import { CourseSyllabus } from '../../components/course-syllabus/CourseSyllabus';
 import { CourseSummary } from '../../components/course-summary/CourseSummary';
+import { CourseProjects } from '../../components/course-projects/CourseProjects';
 
 export const CourseDetailScreen = () => {
   return (
@@ -24,11 +25,9 @@ export const CourseDetailScreen = () => {
       
       <CourseSummary />
 
-      {/* <CourseProjects>
+      <CourseProjects />
 
-      </CourseProjects>
-
-      <CourseRatings>
+      {/* <CourseRatings>
 
       </CourseRatings>
 
