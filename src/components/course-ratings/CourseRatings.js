@@ -9,16 +9,17 @@ import {
   General,
 } from './Styles';
 
-// Components
-import {
-  ProgressBar
-} from '../progress-bar/ProgressBar';
-
 // Icons ANTD
 import {
   StarFilled,
   StarOutlined,
+  DownOutlined
 } from '@ant-design/icons';
+
+// Components
+import { ProgressBar } from '../progress-bar/ProgressBar';
+import { Comment } from '../comment/Comment';
+import { CustomButton } from '../button/CustomButton';
 
 export const CourseRatings = () => {
   return (
@@ -50,8 +51,12 @@ export const CourseRatings = () => {
       </Ratings>
 
       <BestComment>
-        
+        <Comment />
       </BestComment>
+
+      <CustomButton anchorLink="true">
+        textlink <DownOutlined />
+      </CustomButton>
     </StyledCourseRatings>
   )
 }
