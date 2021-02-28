@@ -14,8 +14,8 @@ export const StyledButton = styled( Button )`
   line-height: 16px;
   font-weight: 800;
 
-  ${({ anchorLink }) =>
-    anchorLink === "true"
+  ${({ anchorlink }) =>
+    anchorlink === "true"
       &&
         `
           padding: 0;
