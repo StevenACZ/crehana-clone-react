@@ -7,12 +7,6 @@ import {
   DesktopPagination
 } from './Styles';
 
-// Components
-import { CustomButton } from '../button/CustomButton';
-
-// Components ANTD
-import { Menu, Dropdown } from 'antd';
-
 // Icons ANTD
 import {
   ArrowLeftOutlined,
@@ -21,6 +15,12 @@ import {
   LeftOutlined,
   RightOutlined
 } from '@ant-design/icons';
+
+// Components ANTD
+import { Menu, Dropdown } from 'antd';
+
+// Components
+import { CustomButton } from '../button/CustomButton';
 
 export const Pagination = ({
   currentPage,
