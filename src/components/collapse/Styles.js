@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 
-// Components ANTD
 import { Collapse } from 'antd';
+
+import { color } from '../../assets/styles/variables';
 
 export const StyledCustomCollapse = styled( Collapse )`
   background-color: transparent;
@@ -12,12 +13,13 @@ export const StyledCustomCollapse = styled( Collapse )`
 
   & > .ant-collapse-item {
     margin-bottom: 16px;
-    border: 1px solid #e8eaf0;
+    border: 1px solid ${ color.colorGreyLight1 };
     border-radius: 10px;
     padding: 24px;
 
     & > .ant-collapse-header {
       padding: 0;
+      color: ${ color.colorPrimary };
 
       & > span {
         padding: 0 !important;
@@ -29,7 +31,7 @@ export const StyledCustomCollapse = styled( Collapse )`
       font-size: 12px;
       font-weight: 400;
       line-height: 16px;
-      color: #8d8d9d;
+      color: ${ color.colorGreyLight3 };
       margin-top: 8px;
 
       & > .ant-collapse-content-box {
