@@ -8,8 +8,12 @@ import {
   ModalContent
 } from './Styles';
 
-// Components
-import { CustomButton } from '../button/CustomButton';
+// Icons ANTD
+import {
+  DownOutlined,
+  UserOutlined,
+  FilterOutlined
+} from '@ant-design/icons';
 
 // Components ANTD
 import {
@@ -18,12 +22,8 @@ import {
   Modal
 } from 'antd';
 
-// Icons ANTD
-import {
-  DownOutlined,
-  UserOutlined,
-  FilterOutlined
-} from '@ant-design/icons';
+// Components
+import { CustomButton } from '../button/CustomButton';
 
 export const CoursesFilters = ({
   allFiltersData,
