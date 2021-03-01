@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import { color } from '../../assets/styles/variables';
+
 export const CourseCatalog = styled.main`
   max-width: 1152px;
   height: 100%;
@@ -25,7 +27,7 @@ export const CourseCatalog = styled.main`
 export const Banner = styled.section`
   width: 100%;
   height: 304px;
-  background-color: #f6f7f9;
+  background-color: ${ color.colorGreyLight2 };
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -78,7 +80,7 @@ export const CategoriesList = styled.ul`
 export const CategoriesItem = styled.li`
   min-width: 120px;
   height: 112px;
-  background-color: #f6f7f9;
+  background-color: ${ color.colorGreyLight2 };
   border-radius: 10px;
   display: flex;
   flex-direction: column;
