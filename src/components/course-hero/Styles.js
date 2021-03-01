@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import { color } from '../../assets/styles/variables';
+
 // Desktop
 export const DesktopCourseHero = styled.section`
   height: 100%;
@@ -26,6 +28,7 @@ export const HeroInformation = styled.div`
     font-size: 40px;
     font-weight: 900;
     line-height: 44px;
+    color: ${ color.colorPrimary };
     margin: 0;
   }
 
@@ -33,6 +36,7 @@ export const HeroInformation = styled.div`
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
+    color: ${ color.colorPrimary };
     margin: 24px 0;
   }
 
@@ -65,7 +69,7 @@ export const HeroCard = styled.div`
   /* div */
   & > div:last-child {
     padding: 30px 24px 24px 24px;
-    background-color: #e8eaf0;
+    background-color: ${ color.colorGreyLight1 };
     border-radius: 0 0 10px 10px;
 
     & > nav {
@@ -123,7 +127,7 @@ export const MobileHeroInformation = styled.div`
 export const MobileButtonsContainer = styled.div`
   display: flex;
   flex-direction: column;
-  background-color: #e8eaf0;
+  background-color: ${ color.colorGreyLight1 };
   padding: 24px 20px;
 
   & > button:first-child {
