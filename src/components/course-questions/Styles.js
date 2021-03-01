@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import { color } from '../../assets/styles/variables';
+
 export const StyledCourseQuestions = styled.section`
   max-width: 1152px;
   margin: 48px auto 0 auto;
@@ -9,6 +11,7 @@ export const StyledCourseQuestions = styled.section`
     font-weight: 900;
     line-height: 44px;
     margin-bottom: 25px;
+    color: ${ color.colorBlack };
   }
 
   @media (max-width: 1152px) {
