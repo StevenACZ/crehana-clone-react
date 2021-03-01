@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import { color } from '../../assets/styles/variables';
+
 export const StyledCoursePrice = styled.div`
   display: grid;
   grid-template-columns: auto 1fr;
@@ -11,6 +13,7 @@ export const MainPrice = styled.div`
   display: flex;
   align-items: center;
   font-weight: 800;
+  color: ${ color.colorPrimary };
 
   & > span {
     font-size: 18px;
@@ -62,7 +65,7 @@ export const SecondaryPrice = styled.div`
   font-size: 12px;
   line-height: 16px;
   font-weight: 400;
-  color: #8d8d9d;
+  color: ${ color.colorGreyLight3 };
   text-decoration: line-through;
 
   ${( { size } ) => 
