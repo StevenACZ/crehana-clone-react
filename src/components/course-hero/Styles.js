@@ -8,6 +8,10 @@ export const DesktopCourseHero = styled.section`
 
   display: flex;
   justify-content: space-between;
+
+  @media (max-width: 1152px) {
+    padding: 0 20px;
+  }
 `;
 
 export const HeroInformation = styled.div`
@@ -42,6 +46,10 @@ export const HeroInformation = styled.div`
 
   & > div:nth-child(5) {
     width: 368px;
+  }
+
+  @media (max-width: 1152px) {
+    max-width: 430px;
   }
 `;
 

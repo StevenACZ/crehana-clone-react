@@ -2,17 +2,11 @@ import React from 'react';
 
 // IsMobile?
 import {
-  BrowserView,
-  MobileView,
-  // isMobile
+  CustomView,
+  isMobileOnly,
+  isBrowser,
+  isTablet
 } from "react-device-detect";
-
-// Components
-import { GeneralCourseData } from '../general-course-data/GeneralCourseData';
-import { TeacherGeneralData } from '../teacher-general-data/TeacherGeneralData';
-import { CourseGeneralActions } from '../course-general-actions/CourseGeneralActions';
-import { CoursePrice } from '../course-price/CoursePrice';
-import { CourseVideo } from '../course-video/CourseVideo';
 
 // Styles
 import {
@@ -23,12 +17,19 @@ import {
   MobileHeroInformation,
   MobileButtonsContainer
 } from './Styles';
+
+// Components
+import { GeneralCourseData } from '../general-course-data/GeneralCourseData';
+import { TeacherGeneralData } from '../teacher-general-data/TeacherGeneralData';
+import { CourseGeneralActions } from '../course-general-actions/CourseGeneralActions';
+import { CoursePrice } from '../course-price/CoursePrice';
+import { CourseVideo } from '../course-video/CourseVideo';
 import { CustomButton } from '../button/CustomButton';
 
 export const CourseHero = () => {
   return (
     <>
-      <BrowserView>
+      <CustomView condition={ isBrowser || isTablet }>
         <DesktopCourseHero>
           <HeroInformation>
             <h2>Title H2 - Nombre del curso</h2>
@@ -72,9 +73,9 @@ export const CourseHero = () => {
             </div>
           </HeroCard>
         </DesktopCourseHero>
-      </BrowserView>
+      </CustomView>
 
-      <MobileView>
+      <CustomView condition={ isMobileOnly }>
         <MobileCourseHero>
           <CourseVideo />
 
@@ -115,7 +116,7 @@ export const CourseHero = () => {
 
           <CourseGeneralActions />
         </MobileCourseHero>
-      </MobileView>
+      </CustomView>
     </>
   )
 }
