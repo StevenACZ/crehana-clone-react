@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import { color } from '../../assets/styles/variables';
+
 export const StyledProgressBar = styled.div`
   width: 100%;
   display: flex;
@@ -9,7 +11,7 @@ export const StyledProgressBar = styled.div`
   & > div:first-child {
     width: 100%;
     height: 4px;
-    background-color: #f6f7f9;
+    background-color: ${ color.colorGreyLight2 };
     position: relative;
     display: flex;
     justify-content: center;
@@ -22,14 +24,14 @@ export const StyledProgressBar = styled.div`
       position: absolute;
       top: 0;
       left: 0;
-      background-color: black;
+      background-color: ${ color.colorPrimary };
       width: ${({ percent }) => percent && `${percent}%`};
       height: 100%;
     }
   }
 
   & > div:last-child {
-    color: #8d8d9d;
+    color: ${ color.colorGreyLight3 };
     display: flex;
     align-items: center;
 
