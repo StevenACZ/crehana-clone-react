@@ -10,7 +10,7 @@ export const DesktopCourseHero = styled.section`
   justify-content: space-between;
 
   @media (max-width: 1152px) {
-    padding: 0 20px;
+    padding: 0 20px 25px;
   }
 `;
 
