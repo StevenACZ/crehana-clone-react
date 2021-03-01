@@ -1,9 +1,14 @@
-import React from 'react'
+import React from 'react';
+
+// Styles
+import {
+  Checkout
+} from './Styles';
 
 export const CheckoutScreen = () => {
   return (
-    <div>
+    <Checkout>
       
-    </div>
+    </Checkout>
   )
 }
