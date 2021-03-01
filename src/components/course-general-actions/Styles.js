@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import { color } from '../../assets/styles/variables';
+
 export const StyledCourseGeneralActions = styled.div`
   width: 100%;
   display: flex;
@@ -11,7 +13,7 @@ export const Action = styled.div`
   flex-direction: column;
   align-items: center;
   font-size: 16px;
-  color: #8d8d9d;
+  color: ${ color.colorGreyLight3 };
   font-weight: 700;
   cursor: pointer;
 
