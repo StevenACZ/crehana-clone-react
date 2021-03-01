@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import { color } from '../../assets/styles/variables';
+
 export const StyledCourseRatings = styled.section`
   max-width: 1152px;
   margin: 48px auto 0 auto;
@@ -9,6 +11,7 @@ export const StyledCourseRatings = styled.section`
     font-weight: 900;
     line-height: 44px;
     margin-bottom: 25px;
+    color: ${ color.colorBlack };
   }
 
   @media (max-width: 1152px) {
@@ -48,10 +51,11 @@ export const TotalAverage = styled.div`
     font-size: 52px;
     font-weight: 800;
     line-height: 60px;
+    color: ${ color.colorPrimary };
   }
 
   & > div {
-    color: #8d8d9d;
+    color: ${ color.colorGreyLight3 };
     font-size: 15px;
     
     & > span {
