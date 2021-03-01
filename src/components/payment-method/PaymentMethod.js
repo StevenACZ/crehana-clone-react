@@ -37,7 +37,7 @@ export const PaymentMethod = () => {
     <StyledPaymentMethod>
       <h3>Método de pago</h3>
 
-      <CustomCollapse>
+      <CustomCollapse defaultActiveKey={['1']}>
         <Panel header="Pagar con tarjeta" key="1">
           <Form>
             <div>
