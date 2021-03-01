@@ -10,6 +10,8 @@ export const color = {
   // colorGreyLight3: 'green', // test //
   colorGreyLight4: '#DFE1E6',
   // colorGreyLight4: 'yellow', // test //
+  colorGreyLight5: '#878FB8',
+  // colorGreyLight5: 'purple', // test //
 
   colorWhite: '#fff',
   colorBlack: '#000'
