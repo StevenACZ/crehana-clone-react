@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import { color } from '../../assets/styles/variables';
+
 export const StyledCoursesListItem = styled.div`
   width: 100%;
   height: 100%;
@@ -10,7 +12,7 @@ export const StyledCoursesListItem = styled.div`
 export const Header = styled.div`
   width: 100%;
   height: 160px;
-  background-color: #e8eaf0;
+  background-color: ${ color.colorGreyLight1 };
   position: relative;
 
   & > span {
@@ -19,7 +21,7 @@ export const Header = styled.div`
     left: 8px;
     padding: 4px 8px;
     border-radius: 5px;
-    background-color: #8d8d9d;
+    background-color: ${ color.colorGreyLight3 };
     color: white;
     font-size: 12px;
     line-height: 16px;
@@ -33,7 +35,7 @@ export const Body = styled.div`
   display: grid;
   grid-row-gap: 12px;
   padding: 16px;
-  background-color: #f6f7f9;
+  background-color: ${ color.colorGreyLight2 };
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
 `;
@@ -47,7 +49,7 @@ export const BodyTop = styled.div`
     font-size: 16px;
     font-weight: 700;
     line-height: 20px;
-    color: #181b32;
+    color: ${ color.colorPrimary };
     margin: 0;
   }
 
@@ -55,7 +57,7 @@ export const BodyTop = styled.div`
     font-size: 14px;
     font-weight: 400;
     line-height: 20px;
-    color: #181b32;
+    color: ${ color.colorPrimary };
     margin: 0;
   }
 `;
