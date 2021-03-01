@@ -189,7 +189,6 @@ export const CoursesFilters = ({
       </ButtonsContainer>
     
       <Modal
-        title="Aplicar filtros"
         visible={ isModalVisible }
         onOk={ handleOk }
         okText="Buscar"
