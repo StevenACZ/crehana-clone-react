@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import { color } from '../../assets/styles/variables';
+
 export const StyledPagination = styled.div`
   & > div:first-child {
     display: none;
@@ -55,13 +57,13 @@ export const DesktopPagination = styled.div`
 
   & > button {
     padding: 14px;
-    border-color: #e8eaf0;
+    border-color: ${ color.colorGreyLight1 };
   }
 
   & > span {
     font-size: 16px;
     line-height: 24px;
     font-weight: 400;
-    color: #8d8d9d;
+    color: ${ color.colorGreyLight3 };
   }
 `;
