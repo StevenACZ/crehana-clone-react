@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import { color } from '../../assets/styles/variables';
+
 export const StyledCourseProjects = styled.section`
   max-width: 1152px;
   margin: 0 auto;
@@ -9,6 +11,7 @@ export const StyledCourseProjects = styled.section`
     font-weight: 900;
     line-height: 44px;
     margin-bottom: 25px;
+    color: ${ color.colorBlack };
   }
 
   @media (max-width: 1152px) {
@@ -34,7 +37,7 @@ export const GridCoursesImages = styled.ul`
   gap: 21px;
 
   & > li {
-    background-color: #8d8d9d;
+    background-color: ${ color.colorGreyLight3 };
     border-radius: 10px;
     position: relative;
 
@@ -46,14 +49,14 @@ export const GridCoursesImages = styled.ul`
       align-items: center;
 
       & > div {
-        background-color: black;
+        background-color: ${ color.colorPrimary };
         width: 24px;
         height: 24px;
         border-radius: 50%;
       }
 
       & > span {
-        color: white;
+        color: ${ color.colorWhite };
         margin-left: 9px;
         font-size: 14px;
         font-weight: 700;
@@ -68,7 +71,7 @@ export const GridCoursesImages = styled.ul`
   }
 
   & > li:last-child {
-    background-color: black;
+    background-color: ${ color.colorPrimary };
 
     & > span {
       color: white;
