@@ -20,9 +20,11 @@ export const StyledCourseSummary = styled.section`
     max-width: 662px;
   }
   
-  @media (max-width: 768px) {
+  @media (max-width: 1152px) {
     padding: 40px 20px;
+  }
 
+  @media (max-width: 768px) {
     & > h3 {
       font-size: 24px;
       line-height: 32px;
