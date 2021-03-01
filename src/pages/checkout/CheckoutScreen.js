@@ -24,6 +24,7 @@ import {
 // Components
 import { CustomSteps } from '../../components/steps/CustomSteps';
 import { PaymentMethod } from '../../components/payment-method/PaymentMethod';
+import { PurchaseSummary } from '../../components/purchase-summary/PurchaseSummary';
 
 export const CheckoutScreen = () => {
   const [currentStep, setCurrentStep] = useState(0);
@@ -54,7 +55,7 @@ export const CheckoutScreen = () => {
           </DeskTopLeft>
 
           <DeskTopRight>
-
+            <PurchaseSummary />
           </DeskTopRight>
         </DesktopCheckout>
       </CustomView>
