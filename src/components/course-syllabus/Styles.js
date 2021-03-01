@@ -28,6 +28,7 @@ export const StyledCourseSyllabusContainer = styled.div`
     font-weight: 900;
     line-height: 44px;
     margin-bottom: 24px;
+    color: ${ color.colorBlack };
   }
 
   & > ol:last-child {
