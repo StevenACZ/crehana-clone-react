@@ -22,7 +22,7 @@ export const StyledButton = styled( Button )`
         `
           padding: 0;
           background-color: transparent;
-          color: ${ color.colorBlack };
+          color: ${ color.colorPrimary };
           border: none;
           height: auto;
         `
