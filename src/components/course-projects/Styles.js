@@ -11,6 +11,10 @@ export const StyledCourseProjects = styled.section`
     margin-bottom: 25px;
   }
 
+  @media (max-width: 1152px) {
+    padding: 0 20px;
+  }
+
   @media (max-width: 768px) {
     padding: 0 0 0 20px;
 
