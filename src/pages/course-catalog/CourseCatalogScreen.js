@@ -15,7 +15,11 @@ import {
   Courses
 } from './Styles';
 
+// Icon
 import announcementIcon from '../../assets/images/announcement-icon.png';
+
+// Data
+import { courses } from '../../data/courses';
 
 // Components
 import { CustomButton } from '../../components/button/CustomButton';
@@ -23,8 +27,6 @@ import { CoursesFilters } from '../../components/courses-filters/CoursesFilters'
 import { CoursesList } from '../../components/courses-list/CoursesList';
 import { Pagination } from '../../components/pagination/Pagination';
 
-// Data
-import { courses } from '../../data/courses';
 
 export const CourseCatalogScreen = () => {
   
