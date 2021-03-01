@@ -1,7 +1,9 @@
 import styled from 'styled-components';
 
+import { color } from '../../assets/styles/variables';
+
 export const StyledCourseSyllabus = styled.section`
-  background-color: #f6f7f9;
+  background-color: ${ color.colorGreyLight2 };
   width: 100%;
 
   margin-top: -40px;
@@ -37,6 +39,7 @@ export const StyledCourseSyllabusContainer = styled.div`
 
     & > h3 {
       font-size: 24px;
+      color: ${ color.colorBlack };
     }
   }
 `;
@@ -48,6 +51,7 @@ export const Module = styled.ol`
     font-size: 18px;
     font-weight: 700;
     line-height: 24px;
+    color: ${ color.colorPrimary };
     margin-bottom: 16px;
   }
 
@@ -56,9 +60,10 @@ export const Module = styled.ol`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    color: ${ color.colorPrimary };
 
     & > span {
-      color: #e8eaf0;
+      color: ${ color.colorGreyLight1 };
     }
   }
 
