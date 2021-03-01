@@ -12,6 +12,7 @@ export const StyledCourseSyllabus = styled.section`
   
   @media (max-width: 768px) {
     margin-top: 0px;
+    padding: 0px;
   }
 `;
 
