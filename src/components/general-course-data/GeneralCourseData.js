@@ -1,17 +1,17 @@
 import React from 'react'
 
+// Styles
+import {
+  StyledGeneralCourseData,
+  IconContainer,
+} from './Styles';
+
 // Icons ANTD
 import {
   BarChartOutlined,
   UsergroupDeleteOutlined,
   StarFilled
 } from '@ant-design/icons';
-
-// Styles
-import {
-  StyledGeneralCourseData,
-  IconContainer,
-} from './Styles';
 
 export const GeneralCourseData = ({
   level,
