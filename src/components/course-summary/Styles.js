@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import { color } from '../../assets/styles/variables';
+
 export const StyledCourseSummary = styled.section`
   max-width: 1152px;
   margin: 0 auto;
@@ -18,6 +20,7 @@ export const StyledCourseSummary = styled.section`
     line-height: 24px;
     margin-bottom: 24px;
     max-width: 662px;
+    color: ${ color.colorPrimary };
   }
   
   @media (max-width: 1152px) {
