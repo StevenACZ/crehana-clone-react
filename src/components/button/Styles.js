@@ -2,12 +2,14 @@ import styled from 'styled-components';
 
 import { Button } from 'antd'; 
 
+import { color } from '../../assets/styles/variables';
+
 export const StyledButton = styled( Button )`
   height: 48px;
   padding: 12px 24px;
   border-radius: 10px;
   cursor: pointer;
-  background-color: black;
+  background-color: ${ color.colorPrimary };
   color: white;
   border: none;
   font-size: 16px;
@@ -20,7 +22,7 @@ export const StyledButton = styled( Button )`
         `
           padding: 0;
           background-color: transparent;
-          color: black;
+          color: ${ color.colorBlack };
           border: none;
           height: auto;
         `
@@ -31,8 +33,8 @@ export const StyledButton = styled( Button )`
       &&
         `
           background-color: transparent;
-          color: black;
-          border: 1px solid #181b32;
+          color: ${ color.colorBlack };
+          border: 1px solid ${ color.colorPrimary };
         `
   }
 
@@ -41,8 +43,8 @@ export const StyledButton = styled( Button )`
       &&
         `
           background-color: transparent;
-          color: black;
-          border: 3px solid #181b32;
+          color: ${ color.colorBlack };
+          border: 3px solid ${ color.colorPrimary };
         `
   }
   
@@ -51,8 +53,8 @@ export const StyledButton = styled( Button )`
       &&
         `
           background-color: transparent;
-          color: black;
-          border: 1px solid #8d8d9d;
+          color: ${ color.colorBlack };
+          border: 1px solid ${ color.colorGreyLight3 };
           display: flex;
           justify-content: space-between;
           align-items: center;
@@ -60,7 +62,7 @@ export const StyledButton = styled( Button )`
           span {
             font-weight: 400;
             text-transform: none;
-            color: #8d8d9d;
+            color: ${ color.colorGreyLight3 };
             font-size: 16px;
           }
         `
