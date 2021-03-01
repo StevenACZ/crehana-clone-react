@@ -1,11 +1,13 @@
 import styled from 'styled-components';
 
+import { color } from '../../assets/styles/variables';
+
 export const StyledTeacherGeneralData = styled.div`
   display: flex;
   align-items: center;
 
   div:first-child {
-    background-color: #e8eaf0;
+    background-color: ${ color.colorGreyLight3 };
     width: 64px;
     height: 64px;
     border-radius: 10px;
@@ -14,6 +16,8 @@ export const StyledTeacherGeneralData = styled.div`
   }
 
   div:last-child {
+    color: ${ color.colorPrimary };
+    
     & > p {
       font-size: 16px;
       font-weight: 700;
