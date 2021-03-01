@@ -111,6 +111,7 @@ export const Courses = styled.section`
     line-height: 28px;
     font-weight: 900;
     margin: 0;
+    color: ${ color.colorBlack };
   }
 
   @media (max-width: 768px) {
