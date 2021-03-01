@@ -7,7 +7,7 @@ export const StyledTeacherGeneralData = styled.div`
   align-items: center;
 
   div:first-child {
-    background-color: ${ color.colorGreyLight3 };
+    background-color: ${ color.colorGreyLight1 };
     width: 64px;
     height: 64px;
     border-radius: 10px;
