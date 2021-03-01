@@ -6,6 +6,10 @@ export const StyledCourseSyllabus = styled.section`
 
   margin-top: -40px;
   
+  @media (max-width: 1152px) {
+    padding: 0 20px;
+  }
+  
   @media (max-width: 768px) {
     margin-top: 0px;
   }
