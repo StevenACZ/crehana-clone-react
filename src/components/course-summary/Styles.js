@@ -12,6 +12,7 @@ export const StyledCourseSummary = styled.section`
     font-weight: 900;
     line-height: 44px;
     margin-bottom: 24px;
+    color: ${ color.colorBlack };
   }
 
   & > p {
