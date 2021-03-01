@@ -40,6 +40,7 @@ export const Banner = styled.section`
     font-weight: 900;
     line-height: 44px;
     margin: 0 0 24px 0;
+    color: ${ color.colorBlack };
   }
 
   button {
@@ -61,6 +62,7 @@ export const Categories = styled.section`
     line-height: 28px;
     font-weight: 900;
     margin: 0 0 16px 0;
+    color: ${ color.colorBlack };
   }
 
   @media (max-width: 768px) {
