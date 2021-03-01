@@ -14,7 +14,8 @@ import {
   DeskTopLeft,
   DeskTopRight,
   MobileCheckout,
-  LegalNotes
+  LegalNotes,
+  Summary
 } from './Styles';
 
 // Components ANTD
@@ -70,7 +71,33 @@ export const CheckoutScreen = () => {
       
       <CustomView condition={ isMobileOnly }>
         <MobileCheckout>
+          <CustomSteps
+            type="navigation"
+            size="small"
+            current={ currentStep }
+            onChange={ onChangee }
+            className="site-navigation-steps"
+          >
+            <Step status="process" title="Proceso de pago" />
+            <Step status="wait" title="Paso 2" />
+          </CustomSteps>
 
+          <Summary>
+            <h3>Resumen</h3>
+
+            <div>
+              <PurchaseSummary />
+            </div>
+          </Summary>
+
+          <PaymentMethod />
+
+          <LegalNotes>
+            <span>Notas legales</span>
+            <p>
+              Body 3- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id mi, mauris aliquam phasellus quis semper diam fringilla. Nunc nullam est in non. Enim sapien amet ut pharetra. Purus sagittis est felis sapien in. Auctor tellus, in mauris mi, facilisi arc. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id mi, mauris aliquam phasellus quis semper diam fringilla. Nunc nullam est in non. Enim sapien amet ut pharetra. Purus sagittis est felis sapien in. Auctor tellus, in mauris mi, facilisi arcu sedut.
+            </p>
+          </LegalNotes>
         </MobileCheckout>
       </CustomView>
     </>

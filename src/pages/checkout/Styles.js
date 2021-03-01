@@ -48,5 +48,29 @@ export const DeskTopRight = styled.div`
 
 // Mobile
 export const MobileCheckout = styled.main`
+  padding: 0 20px;
 
+  & > div:last-child {
+    margin-top: 24px;
+    padding-bottom: 50px;
+  }
+`;
+
+export const Summary = styled.div`
+  margin-bottom: 24px;
+
+  & > h3 {
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 28px;
+    color: ${ color.colorPrimary };
+    margin-top: 20px;
+    margin-bottom: 16px;
+  }
+
+  & > div {
+    background-color: ${ color.colorGreyLight2 };
+    border-radius: 2px;
+    padding: 16px;
+  }
 `;
