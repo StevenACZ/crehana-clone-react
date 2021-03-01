@@ -20,7 +20,7 @@ export const Header = styled.div`
   }
 
   & > div:last-child {
-    width: 304px;
+    max-width: 304px;
 
     & > p {
       font-size: 16px;

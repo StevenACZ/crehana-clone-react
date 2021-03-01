@@ -4,20 +4,26 @@ import { color } from '../../assets/styles/variables';
 
 // Desktop
 export const DesktopCheckout = styled.main`
-  display: grid;
-  grid-template-columns: 1fr 608px;
+  max-width: 1152px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+
+  @media (max-width: 1152px) {
+    padding: 0 20px;
+  }
 `;
 
 export const DeskTopLeft = styled.div`
-  padding: 45px 80px;
+  padding: 0 0 45px;
 
   & > div:first-child {
-    width: 490px;
+    max-width: 490px;
     margin-bottom: 38px;
   }
 
   & > div:last-child {
-    width: 564px;
+    max-width: 464px;
   }
 `;
 
@@ -38,6 +44,7 @@ export const LegalNotes = styled.div`
 `;
 
 export const DeskTopRight = styled.div`
+  max-width: 500px;
   background-color: ${ color.colorGreyLight2 };
   padding: 43px 72px;
 
