@@ -7,12 +7,6 @@ import {
   ButtonsContainer
 } from './Styles';
 
-// Components
-import { CustomButton } from '../button/CustomButton';
-
-// Components ANTD
-import { Drawer } from 'antd';
-
 // Logo
 import LogoImg from '../../assets/images/logo.png';
 
@@ -21,6 +15,13 @@ import {
   MenuOutlined,
   SearchOutlined
 } from '@ant-design/icons';
+
+// Components ANTD
+import { Drawer } from 'antd';
+
+// Components
+import { CustomButton } from '../button/CustomButton';
+import { Link } from 'react-router-dom';
 
 export const Header = () => {
 
@@ -63,7 +64,9 @@ export const Header = () => {
           </ButtonsContainer>
         </Drawer>
 
-      <Logo src={ LogoImg } />
+      <Link to="/">
+        <Logo src={ LogoImg } />
+      </Link>
 
       <SearchOutlined />
 
