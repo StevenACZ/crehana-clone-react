@@ -1,17 +1,22 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 // React Router
-import { useHistory } from 'react-router-dom';
+import {
+  useHistory,
+  useLocation
+} from 'react-router-dom';
 
 // Styles
 import {
   Logo,
   StyledHeader,
-  ButtonsContainer
+  ButtonsContainer,
+  StyledHeaderCheckout
 } from './Styles';
 
 // Logo
-import LogoImg from '../../assets/images/logo.png';
+import LogoBlack from '../../assets/images/logo-black.png';
+import LogoWhite from '../../assets/images/logo-white.png';
 
 // Icons ANTD
 import {
@@ -27,9 +32,11 @@ import { CustomButton } from '../button/CustomButton';
 
 export const Header = () => {
 
-  const history = useHistory()
+  const history = useHistory();
+  const location = useLocation();
 
   const [ visible, setVisible ] = useState( false );
+  const [currentLocation, setCurrentLocation] = useState('');
 
   const showDrawer = () => {
     setVisible( true );
@@ -39,42 +46,61 @@ export const Header = () => {
     setVisible( false );
   };
 
+  useEffect(() => {
+    setCurrentLocation( location.pathname );
+  }, [ location ])
+
   return (
-    <StyledHeader>
-      <MenuOutlined onClick={ showDrawer } />
+    <>
+      {
+        currentLocation !== "/checkout"
+          ?
+            (
+              <StyledHeader>
+                <MenuOutlined onClick={ showDrawer } />
 
-      <Drawer
-          placement="left"
-          closable={ false }
-          onClose={ onClose }
-          visible={ visible }
-        >
-          <ButtonsContainer>
-            <CustomButton>
-              Loggout
-            </CustomButton>
+                <Drawer
+                    placement="left"
+                    closable={ false }
+                    onClose={ onClose }
+                    visible={ visible }
+                  >
+                    <ButtonsContainer>
+                      <CustomButton>
+                        Loggout
+                      </CustomButton>
 
-            <CustomButton outline={ 3 }>
-              Registrate gratis
-            </CustomButton>
+                      <CustomButton outline={ 3 }>
+                        Registrate gratis
+                      </CustomButton>
 
-            <CustomButton outline={ 3 }>
-              Sobre nosotros
-            </CustomButton>
+                      <CustomButton outline={ 3 }>
+                        Sobre nosotros
+                      </CustomButton>
 
-            <CustomButton outline={ 3 }>
-              Cursos
-            </CustomButton>
-          </ButtonsContainer>
-        </Drawer>
+                      <CustomButton outline={ 3 }>
+                        Cursos
+                      </CustomButton>
+                    </ButtonsContainer>
+                  </Drawer>
 
-      <Logo src={ LogoImg } onClick={ () => history.push('/') } />
+                <Logo src={ LogoBlack } onClick={ () => history.push('/') } />
 
-      <SearchOutlined />
+                <SearchOutlined />
 
-      <CustomButton outline={ 3 }>
-        Registrate gratis
-      </CustomButton>
-    </StyledHeader>
+                <CustomButton outline={ 3 }>
+                  Registrate gratis
+                </CustomButton>
+              </StyledHeader>
+            )
+          :
+            (
+              <StyledHeaderCheckout>
+                <Logo src={ LogoWhite } onClick={ () => history.push('/') } />
+              </StyledHeaderCheckout>
+            )
+      }
+    </>
+
   )
 }

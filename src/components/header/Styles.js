@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import { color } from '../../assets/styles/variables';
+
 export const StyledHeader = styled.header`
   max-width: 1152px;
   height: 72px;
@@ -49,4 +51,14 @@ export const ButtonsContainer = styled.div`
   & > button {
     width: 100%;
   }
+`;
+
+export const StyledHeaderCheckout = styled.header`
+  /* max-width: 1152px; */
+  height: 72px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  background-color: ${ color.colorPrimary };
 `;
