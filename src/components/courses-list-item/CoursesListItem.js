@@ -16,7 +16,6 @@ import {
 import { CustomButton } from '../button/CustomButton';
 import { GeneralCourseData } from '../general-course-data/GeneralCourseData';
 import { CoursePrice } from '../course-price/CoursePrice';
-import { Link } from 'react-router-dom';
 
 export const CoursesListItem = ({
   course_name,
