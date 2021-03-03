@@ -55,7 +55,7 @@ export const DeskTopRight = styled.div`
 
 // Mobile
 export const MobileCheckout = styled.main`
-  padding: 0 20px;
+  padding: 8px 20px;
 
   & > div:last-child {
     margin-top: 24px;
