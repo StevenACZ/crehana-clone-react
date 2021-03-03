@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 
+// React Router
+import { useHistory } from 'react-router-dom';
+
 // Styles
 import {
   Logo,
@@ -21,9 +24,10 @@ import { Drawer } from 'antd';
 
 // Components
 import { CustomButton } from '../button/CustomButton';
-import { Link } from 'react-router-dom';
 
 export const Header = () => {
+
+  const history = useHistory()
 
   const [ visible, setVisible ] = useState( false );
 
@@ -64,9 +68,7 @@ export const Header = () => {
           </ButtonsContainer>
         </Drawer>
 
-      <Link to="/">
-        <Logo src={ LogoImg } />
-      </Link>
+      <Logo src={ LogoImg } onClick={ () => history.push('/') } />
 
       <SearchOutlined />
 

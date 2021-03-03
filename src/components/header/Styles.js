@@ -38,6 +38,7 @@ export const StyledHeader = styled.header`
 export const Logo = styled.img`
   width: 163px;
   height: 24px;
+  cursor: pointer;
 `;
 
 export const ButtonsContainer = styled.div`
