@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 
 // React Router
 import {
@@ -29,6 +29,8 @@ import { Drawer } from 'antd';
 
 // Components
 import { CustomButton } from '../button/CustomButton';
+import { types } from '../../types/types';
+import { AuthContext } from '../../auth/AuthContext';
 
 export const Header = () => {
 
@@ -50,6 +52,24 @@ export const Header = () => {
     setCurrentLocation( location.pathname );
   }, [ location ])
 
+  const { user, dispatch } = useContext(AuthContext);
+
+  const handleLogout = () => {
+		history.replace('/');
+    
+		dispatch({
+      type: types.logout,
+			payload: {}
+		})
+
+    onClose();
+	}
+
+  const handleLogin = () => {
+    history.replace('/login');
+    onClose();
+  }
+
   return (
     <>
       {
@@ -66,9 +86,22 @@ export const Header = () => {
                     visible={ visible }
                   >
                     <ButtonsContainer>
-                      <CustomButton>
-                        Loggout
-                      </CustomButton>
+
+                      {
+                        user.logged
+                          ?
+                            (
+                              <CustomButton onClick={ handleLogout }>
+                                Loggout
+                              </CustomButton>
+                            )
+                          :
+                            (
+                              <CustomButton onClick={ handleLogin }>
+                                Login
+                              </CustomButton>
+                            )
+                      }
 
                       <CustomButton outline={ 3 }>
                         Registrate gratis
@@ -87,10 +120,25 @@ export const Header = () => {
                 <Logo src={ LogoBlack } onClick={ () => history.push('/') } />
 
                 <SearchOutlined />
-
-                <CustomButton outline={ 3 }>
-                  Registrate gratis
-                </CustomButton>
+                
+                {
+                  user.logged
+                    ?
+                      (
+                        <CustomButton
+                          outline={ 3 }
+                          onClick={ handleLogout }
+                        >
+                          Loggout
+                        </CustomButton>
+                      )
+                    :
+                      (
+                        <CustomButton outline={ 3 }>
+                          Registrate gratis
+                        </CustomButton>
+                      )
+                }
               </StyledHeader>
             )
           :
