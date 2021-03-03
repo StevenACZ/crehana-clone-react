@@ -13,6 +13,7 @@ import {
 import { CustomButton } from '../button/CustomButton';
 import { GeneralCourseData } from '../general-course-data/GeneralCourseData';
 import { CoursePrice } from '../course-price/CoursePrice';
+import { Link } from 'react-router-dom';
 
 export const CoursesListItem = ({
   course_name,
@@ -25,13 +26,18 @@ export const CoursesListItem = ({
 }) => {
   return (
     <StyledCoursesListItem>
-      <Header>
-        <span>Tag venta</span>
-      </Header>
+      <Link to="/course">
+        <Header>
+          <span>Tag venta</span>
+        </Header>
+      </Link>
 
       <Body>
         <BodyTop>
-          <h5>{ course_name }</h5>
+          <Link to="/course">
+            <h5>{ course_name }</h5>
+          </Link>
+
           <p>{ username }</p>
 
           <GeneralCourseData

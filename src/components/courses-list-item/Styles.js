@@ -45,7 +45,7 @@ export const BodyTop = styled.div`
   display: grid;
   grid-row-gap: 8px;
 
-  & > h5 {
+  h5 {
     font-size: 16px;
     font-weight: 700;
     line-height: 20px;
