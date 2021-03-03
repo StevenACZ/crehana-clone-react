@@ -1,5 +1,8 @@
 import React from 'react';
 
+// React Router
+import { useHistory } from 'react-router-dom';
+
 // IsMobile?
 import {
   CustomView,
@@ -27,6 +30,8 @@ import { CourseVideo } from '../course-video/CourseVideo';
 import { CustomButton } from '../button/CustomButton';
 
 export const CourseHero = () => {
+  const history = useHistory();
+
   return (
     <>
       <CustomView condition={ isBrowser || isTablet }>
@@ -62,7 +67,7 @@ export const CourseHero = () => {
               />
 
               <nav>
-                <CustomButton>
+                <CustomButton onClick={ () => history.push('/checkout') }>
                   Comprar ahora
                 </CustomButton>
 
