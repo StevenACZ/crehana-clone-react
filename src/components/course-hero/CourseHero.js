@@ -110,7 +110,7 @@ export const CourseHero = () => {
           />
 
           <MobileButtonsContainer>
-            <CustomButton>
+            <CustomButton onClick={ () => history.push('/checkout') }>
               Comprar ahora
             </CustomButton>
 
