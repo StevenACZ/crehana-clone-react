@@ -15,7 +15,7 @@ export const DesktopCheckout = styled.main`
 `;
 
 export const DeskTopLeft = styled.div`
-  padding: 0 0 45px;
+  padding: 30px 0 45px;
 
   & > div:first-child {
     max-width: 490px;
