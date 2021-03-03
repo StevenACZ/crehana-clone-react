@@ -14,6 +14,7 @@ export const Header = styled.div`
   height: 160px;
   background-color: ${ color.colorGreyLight1 };
   position: relative;
+  cursor: pointer;
 
   & > span {
     position: absolute;
@@ -45,12 +46,13 @@ export const BodyTop = styled.div`
   display: grid;
   grid-row-gap: 8px;
 
-  h5 {
+  & > h5 {
     font-size: 16px;
     font-weight: 700;
     line-height: 20px;
     color: ${ color.colorPrimary };
     margin: 0;
+    cursor: pointer;
   }
 
   & > p {

@@ -1,5 +1,8 @@
 import React from 'react';
 
+// React Router
+import { useHistory } from 'react-router-dom';
+
 // Styles
 import {
   Body,
@@ -24,19 +27,18 @@ export const CoursesListItem = ({
   course_score,
   users
 }) => {
+
+  const history = useHistory();
+
   return (
     <StyledCoursesListItem>
-      <Link to="/course">
-        <Header>
-          <span>Tag venta</span>
-        </Header>
-      </Link>
+      <Header onClick={ () => history.push('/course') }>
+        <span>Tag venta</span>
+      </Header>
 
       <Body>
         <BodyTop>
-          <Link to="/course">
-            <h5>{ course_name }</h5>
-          </Link>
+          <h5 onClick={ () => history.push('/course') }>{ course_name }</h5>
 
           <p>{ username }</p>
 
@@ -54,7 +56,7 @@ export const CoursesListItem = ({
             size="1"
           />
 
-          <CustomButton>
+          <CustomButton onClick={ () => history.push('/checkout') }>
             Compra ahora
           </CustomButton>
         </BodyBottom>
