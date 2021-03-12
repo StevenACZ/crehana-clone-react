@@ -1,11 +1,21 @@
 // React
-import React, { useContext } from 'react';
+import React from 'react';
 
 // React Router
-import { HashRouter, Redirect, Route, Switch } from 'react-router-dom';
+import {
+  HashRouter,
+  Redirect,
+  Route,
+  Switch
+} from 'react-router-dom';
+
+// Redux
+import { useSelector } from 'react-redux';
+
+// Redux - Reducers
+import { selectIsAuthenticated } from '../features/authSlice';
 
 // Auth
-import { AuthContext } from '../auth/AuthContext';
 import { PrivateRoute } from './PrivateRoute';
 import { PublicRoute } from './PublicRoute';
 
@@ -17,8 +27,7 @@ import { LoginScreen } from '../pages/login/LoginScreen';
 import { Header } from '../components/header/Header';
 
 export const AppRouter = () => {
-
-  const { user } = useContext( AuthContext );
+  const isAuthenticated = useSelector( selectIsAuthenticated );
 
   return (
     <HashRouter>
@@ -39,13 +48,13 @@ export const AppRouter = () => {
           exact
           path="/login"
           component={ LoginScreen }
-          isAuthenticated={ user.logged }
+          isAuthenticated={ isAuthenticated }
         />
         <PrivateRoute
           exact
           path="/checkout"
           component={ CheckoutScreen }
-          isAuthenticated={ user.logged }
+          isAuthenticated={ isAuthenticated }
         />
         <Redirect to="/" />
       </Switch>
