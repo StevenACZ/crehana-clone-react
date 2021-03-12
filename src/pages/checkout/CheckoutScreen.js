@@ -1,3 +1,4 @@
+// React
 import React, { useState } from 'react';
 
 // IsMobile?
@@ -19,9 +20,7 @@ import {
 } from './Styles';
 
 // Components ANTD
-import {
-  Steps
-} from 'antd'
+import { Steps } from 'antd';
 
 // Components
 import { CustomSteps } from '../../components/steps/CustomSteps';
