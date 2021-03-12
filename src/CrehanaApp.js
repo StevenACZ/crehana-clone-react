@@ -1,4 +1,7 @@
+// React
 import React, { useEffect, useReducer } from 'react';
+
+// React - Router
 import { AppRouter } from './routers/AppRouter';
 
 // Auth
