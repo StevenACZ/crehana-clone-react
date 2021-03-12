@@ -19,6 +19,9 @@ import { selectIsAuthenticated } from '../features/authSlice';
 import { PrivateRoute } from './PrivateRoute';
 import { PublicRoute } from './PublicRoute';
 
+// Utils
+import ScrollToTop from '../utils/scrollToTop';
+
 // Components
 import { CheckoutScreen } from '../pages/checkout/CheckoutScreen';
 import { CourseCatalogScreen } from '../pages/course-catalog/CourseCatalogScreen';
@@ -31,8 +34,9 @@ export const AppRouter = () => {
 
   return (
     <HashRouter>
-      <Header />
+      <ScrollToTop />
       
+      <Header />
       <Switch>
         <Route
           exact
