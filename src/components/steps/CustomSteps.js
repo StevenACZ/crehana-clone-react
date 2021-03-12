@@ -1,9 +1,8 @@
+// React
 import React from 'react';
 
 // Styles
-import {
-  StyledCustomSteps
-} from './Styles';
+import { StyledCustomSteps } from './Styles';
 
 export const CustomSteps = ({
   children,
