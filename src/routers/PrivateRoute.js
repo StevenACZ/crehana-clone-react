@@ -1,7 +1,7 @@
 // React
 import React from 'react';
 
-// Router Router
+// React Router
 import { Redirect, Route } from 'react-router-dom';
 
 // Prop Types
