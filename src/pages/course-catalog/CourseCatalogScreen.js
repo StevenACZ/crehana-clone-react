@@ -1,3 +1,4 @@
+// React
 import React, { useEffect, useState } from 'react';
 
 // IsMobile?
@@ -97,7 +98,7 @@ export const CourseCatalogScreen = () => {
 
   useEffect(() => {
     setAllFiltersData(getAllFiltersData( courses ));
-  }, [ ])
+  }, [])
 
   return (
     <CourseCatalog>
