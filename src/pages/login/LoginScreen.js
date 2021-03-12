@@ -1,5 +1,11 @@
 // React
-import React, { useContext } from 'react';
+import React from 'react';
+
+// Redux
+import { useDispatch } from 'react-redux';
+
+// Redux - Reducers
+import { login } from '../../features/authSlice';
 
 // Styles
 import {
@@ -16,13 +22,8 @@ import {
 // Custom Hooks
 import useForm from '../../customHooks/useForm';
 
-// Others
-import { AuthContext } from '../../auth/AuthContext';
-import { types } from '../../types/types';
-
 export const LoginScreen = () => {
-
-  const { dispatch } = useContext( AuthContext );
+  const dispatch = useDispatch();
 
   const initialState = {
     email: '',
@@ -37,13 +38,7 @@ export const LoginScreen = () => {
     e.preventDefault();
 
     if ( email.length > 1 && password.length > 1 ) {
-      dispatch({
-        type: types.login,
-        payload: {
-          user: initialState
-        }
-      })
-
+      dispatch( login( email, password ) );
       reset();
     }
   }
