@@ -1,5 +1,5 @@
+// React
 import React from 'react';
-import { GeneralCourseData } from '../general-course-data/GeneralCourseData';
 
 // Styles
 import {
@@ -8,6 +8,9 @@ import {
   Body,
   Price
 } from './Styles';
+
+// Components
+import { GeneralCourseData } from '../general-course-data/GeneralCourseData';
 
 export const PurchaseSummary = () => {
   return (
