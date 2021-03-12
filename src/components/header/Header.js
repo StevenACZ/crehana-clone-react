@@ -1,7 +1,6 @@
 // React
 import
   React, {
-  useContext,
   useEffect,
   useState 
 } from 'react';
@@ -11,6 +10,18 @@ import {
   useHistory,
   useLocation
 } from 'react-router-dom';
+
+// Redux
+import {
+  useDispatch,
+  useSelector
+} from 'react-redux';
+
+// Redux - Reducers
+import {
+  logout,
+  selectIsAuthenticated
+} from '../../features/authSlice';
 
 // Styles
 import {
@@ -35,16 +46,16 @@ import { Drawer } from 'antd';
 
 // Components
 import { CustomButton } from '../button/CustomButton';
-import { types } from '../../types/types';
-import { AuthContext } from '../../auth/AuthContext';
 
 export const Header = () => {
+  const dispatch = useDispatch();
+  const isAuthenticated = useSelector( selectIsAuthenticated );
 
   const history = useHistory();
   const location = useLocation();
 
   const [ visible, setVisible ] = useState( false );
-  const [currentLocation, setCurrentLocation] = useState('');
+  const [ currentLocation, setCurrentLocation ] = useState('');
 
   const showDrawer = () => {
     setVisible( true );
@@ -58,16 +69,9 @@ export const Header = () => {
     setCurrentLocation( location.pathname );
   }, [ location ])
 
-  const { user, dispatch } = useContext(AuthContext);
-
   const handleLogout = () => {
 		history.replace('/');
-    
-		dispatch({
-      type: types.logout,
-			payload: {}
-		})
-
+    dispatch( logout() );
     onClose();
 	}
 
@@ -94,7 +98,7 @@ export const Header = () => {
                     <ButtonsContainer>
 
                       {
-                        user.logged
+                        isAuthenticated
                           ?
                             (
                               <CustomButton onClick={ handleLogout }>
@@ -128,7 +132,7 @@ export const Header = () => {
                 <SearchOutlined />
                 
                 {
-                  user.logged
+                  isAuthenticated
                     ?
                       (
                         <CustomButton
