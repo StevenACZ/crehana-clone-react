@@ -1,9 +1,8 @@
+// React
 import React from 'react';
 
 // Styles
-import {
-  StyledCustomCollapse
-} from './Styles';
+import { StyledCustomCollapse } from './Styles';
 
 export const CustomCollapse = ({
   children,
