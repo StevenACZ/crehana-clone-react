@@ -1,9 +1,8 @@
+// React
 import React from 'react';
 
 // Styles
-import {
-  StyledTeacherGeneralData
-} from './Styles';
+import { StyledTeacherGeneralData } from './Styles';
 
 export const TeacherGeneralData = ({
   teacher_name,
