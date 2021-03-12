@@ -1,15 +1,16 @@
+// React
 import React from 'react';
-import { CustomButton } from '../button/CustomButton';
 
 // Styles
-import {
-  StyledCourseSummary
-} from './Styles';
+import { StyledCourseSummary } from './Styles';
 
 // Icons ANTD
 import {
   DownOutlined,
 } from '@ant-design/icons';
+
+// Components
+import { CustomButton } from '../button/CustomButton';
 
 export const CourseSummary = () => {
   return (
