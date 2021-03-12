@@ -1,4 +1,7 @@
+// React
 import React, { useContext } from 'react';
+
+// React Router
 import { HashRouter, Redirect, Route, Switch } from 'react-router-dom';
 
 // Auth
@@ -6,6 +9,7 @@ import { AuthContext } from '../auth/AuthContext';
 import { PrivateRoute } from './PrivateRoute';
 import { PublicRoute } from './PublicRoute';
 
+// Components
 import { CheckoutScreen } from '../pages/checkout/CheckoutScreen';
 import { CourseCatalogScreen } from '../pages/course-catalog/CourseCatalogScreen';
 import { CourseDetailScreen } from '../pages/course-detail/CourseDetailScreen';
