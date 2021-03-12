@@ -2,9 +2,7 @@
 import React from 'react';
 
 // Styles
-import {
-  CourseDetail,
-} from './Styles';
+import { CourseDetail } from './Styles';
 
 // Components
 import { CourseHero } from '../../components/course-hero/CourseHero';
