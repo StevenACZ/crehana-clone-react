@@ -14,9 +14,9 @@ import {
 } from './Styles';
 
 // Components
-import { CustomButton } from '../button/CustomButton';
-import { GeneralCourseData } from '../general-course-data/GeneralCourseData';
-import { CoursePrice } from '../course-price/CoursePrice';
+import { CustomButton } from '../../button/CustomButton';
+import { GeneralCourseData } from '../../general-course-data/GeneralCourseData';
+import { CoursePrice } from '../../course-price/CoursePrice';
 
 export const CoursesListItem = ({
   course_name,
@@ -25,42 +25,37 @@ export const CoursesListItem = ({
   real_price,
   price,
   course_score,
-  users
+  users,
 }) => {
-
   const history = useHistory();
 
   return (
     <StyledCoursesListItem>
-      <Header onClick={ () => history.push('/course') }>
+      <Header onClick={() => history.push('/course')}>
         <span>Tag venta</span>
       </Header>
 
       <Body>
         <BodyTop>
-          <h5 onClick={ () => history.push('/course') }>{ course_name }</h5>
+          <h5 onClick={() => history.push('/course')}>{course_name}</h5>
 
-          <p>{ username }</p>
+          <p>{username}</p>
 
           <GeneralCourseData
-            level={ level }
-            users={ users }
-            course_score={ course_score }
+            level={level}
+            users={users}
+            course_score={course_score}
           />
         </BodyTop>
 
-        <BodyBottom>          
-          <CoursePrice
-            price={ price }
-            real_price={ real_price }
-            size="1"
-          />
+        <BodyBottom>
+          <CoursePrice price={price} real_price={real_price} size="1" />
 
-          <CustomButton onClick={ () => history.push('/checkout') }>
+          <CustomButton onClick={() => history.push('/checkout')}>
             Compra ahora
           </CustomButton>
         </BodyBottom>
       </Body>
     </StyledCoursesListItem>
-  )
-}
+  );
+};
